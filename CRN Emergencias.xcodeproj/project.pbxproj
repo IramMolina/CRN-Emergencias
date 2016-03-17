@@ -15,6 +15,7 @@
 		5F5DAE221C9B486B0038FCD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5DAE201C9B486B0038FCD1 /* LaunchScreen.storyboard */; };
 		5F5DAE2D1C9B486B0038FCD1 /* CRN_EmergenciasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5DAE2C1C9B486B0038FCD1 /* CRN_EmergenciasTests.swift */; };
 		5F5DAE381C9B486B0038FCD1 /* CRN_EmergenciasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5DAE371C9B486B0038FCD1 /* CRN_EmergenciasUITests.swift */; };
+		5F5DAE481C9B51CF0038FCD1 /* emergencyicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F5DAE471C9B51CF0038FCD1 /* emergencyicon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5F5DAE331C9B486B0038FCD1 /* CRN EmergenciasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CRN EmergenciasUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5DAE371C9B486B0038FCD1 /* CRN_EmergenciasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRN_EmergenciasUITests.swift; sourceTree = "<group>"; };
 		5F5DAE391C9B486B0038FCD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F5DAE471C9B51CF0038FCD1 /* emergencyicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emergencyicon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				5F5DAE1B1C9B486B0038FCD1 /* Main.storyboard */,
 				5F5DAE1E1C9B486B0038FCD1 /* Assets.xcassets */,
 				5F5DAE201C9B486B0038FCD1 /* LaunchScreen.storyboard */,
+				5F5DAE471C9B51CF0038FCD1 /* emergencyicon.png */,
 				5F5DAE231C9B486B0038FCD1 /* Info.plist */,
 			);
 			path = "CRN Emergencias";
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F5DAE481C9B51CF0038FCD1 /* emergencyicon.png in Resources */,
 				5F5DAE221C9B486B0038FCD1 /* LaunchScreen.storyboard in Resources */,
 				5F5DAE1F1C9B486B0038FCD1 /* Assets.xcassets in Resources */,
 				5F5DAE1D1C9B486B0038FCD1 /* Main.storyboard in Resources */,
@@ -488,6 +492,7 @@
 				5F5DAE3E1C9B486B0038FCD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F5DAE3F1C9B486B0038FCD1 /* Build configuration list for PBXNativeTarget "CRN EmergenciasTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				5F5DAE411C9B486B0038FCD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F5DAE421C9B486B0038FCD1 /* Build configuration list for PBXNativeTarget "CRN EmergenciasUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				5F5DAE441C9B486B0038FCD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
