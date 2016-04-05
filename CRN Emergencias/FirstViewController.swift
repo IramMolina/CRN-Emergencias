@@ -15,6 +15,10 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
     let administradorDeUbicacion = CLLocationManager()
     
+    // MARK: - Variables de Ubicación
+    var latitudUsuario: Double = 0.0
+    var longitudUsuario: Double = 0.0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,13 +57,20 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let ubicacion = locations.last
         
-        let centro = CLLocationCoordinate2D(latitude: ubicacion!.coordinate.latitude, longitude: ubicacion!.coordinate.longitude)
+        let coordenadas = CLLocationCoordinate2D(latitude: ubicacion!.coordinate.latitude, longitude: ubicacion!.coordinate.longitude)
         
-        print(centro)
+        self.latitudUsuario = coordenadas.latitude
+        self.longitudUsuario = coordenadas.longitude
+        
+        
+        self.administradorDeUbicacion.stopUpdatingLocation()
         
         
     }
 
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print(error.localizedDescription)
+    }
 
 }
 
