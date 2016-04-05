@@ -7,16 +7,29 @@
 //
 
 import UIKit
+import CoreLocation
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var BotonEmergencia_Outlet: UIButton!
+    
+    let administradorDeUbicacion = CLLocationManager()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
-        BotonEmergencia_Outlet.tintColor = UIColor.redColor()
+        
+        
+        self.administradorDeUbicacion.delegate = self
+        
+        self.administradorDeUbicacion.desiredAccuracy = kCLLocationAccuracyBest
+        
+        self.administradorDeUbicacion.requestWhenInUseAuthorization()
+        
+        self.administradorDeUbicacion.startUpdatingLocation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +42,21 @@ class FirstViewController: UIViewController {
         let phone = "tel://7225857373";
         let url : NSURL = NSURL(string:phone)!;
         UIApplication.sharedApplication().openURL(url);
+        
+    }
+    
+    
+    
+    
+    // MARK: - Métodos de Ubicación
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let ubicacion = locations.last
+        
+        let centro = CLLocationCoordinate2D(latitude: ubicacion!.coordinate.latitude, longitude: ubicacion!.coordinate.longitude)
+        
+        print(centro)
+        
         
     }
 
