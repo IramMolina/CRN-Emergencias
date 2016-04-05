@@ -20,9 +20,18 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     var longitudUsuario: Double = 0.0
     
     
+    @IBAction func onPayNowButtonTapped(longTapButton: ANLongTapButton)
+    {
+        longTapButton.didTimePeriodElapseBlock = { () -> Void in
+            let alert = UIAlertController(title: "Payment", message: "Payment has been made.", preferredStyle:   UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -47,9 +56,10 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         let url : NSURL = NSURL(string:phone)!;
         UIApplication.sharedApplication().openURL(url);
         
+        
     }
     
-    
+
     
     
     // MARK: - Métodos de Ubicación
@@ -62,6 +72,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         self.latitudUsuario = coordenadas.latitude
         self.longitudUsuario = coordenadas.longitude
         
+        print(coordenadas)
         
         self.administradorDeUbicacion.stopUpdatingLocation()
         
