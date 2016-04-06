@@ -34,6 +34,9 @@
 		5FF587491CB459F300C8248B /* alarm_base3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FF587481CB459F300C8248B /* alarm_base3.png */; };
 		5FF5874B1CB45A3B00C8248B /* alarm_base4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FF5874A1CB45A3B00C8248B /* alarm_base4.png */; };
 		5FF5874D1CB45FA500C8248B /* BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5FF5874C1CB45FA500C8248B /* BG.jpg */; };
+		6F4E68201CB4936E007D7986 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F4E681F1CB4936E007D7986 /* avatar.png */; };
+		6F4E68271CB49442007D7986 /* medical.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F4E68251CB49442007D7986 /* medical.png */; };
+		6F4E68281CB49442007D7986 /* technology.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F4E68261CB49442007D7986 /* technology.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,9 @@
 		5FF587481CB459F300C8248B /* alarm_base3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_base3.png; sourceTree = "<group>"; };
 		5FF5874A1CB45A3B00C8248B /* alarm_base4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_base4.png; sourceTree = "<group>"; };
 		5FF5874C1CB45FA500C8248B /* BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BG.jpg; sourceTree = "<group>"; };
+		6F4E681F1CB4936E007D7986 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		6F4E68251CB49442007D7986 /* medical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medical.png; sourceTree = "<group>"; };
+		6F4E68261CB49442007D7986 /* technology.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = technology.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,7 @@
 		5F5DAE141C9B486B0038FCD1 /* CRN Emergencias */ = {
 			isa = PBXGroup;
 			children = (
+				6F4E681F1CB4936E007D7986 /* avatar.png */,
 				5FF587431CB456D100C8248B /* Assets */,
 				5F5DAE151C9B486B0038FCD1 /* AppDelegate.swift */,
 				5F5DAE171C9B486B0038FCD1 /* FirstViewController.swift */,
@@ -178,6 +185,8 @@
 		5FF587431CB456D100C8248B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6F4E68251CB49442007D7986 /* medical.png */,
+				6F4E68261CB49442007D7986 /* technology.png */,
 				5F0EE4381CB46AA5003AD71D /* BG2.jpg */,
 				5F0EE43A1CB46AA5003AD71D /* BG4.jpg */,
 				5FF587441CB4595300C8248B /* alarm_base1.png */,
@@ -300,6 +309,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F4E68271CB49442007D7986 /* medical.png in Resources */,
+				6F4E68201CB4936E007D7986 /* avatar.png in Resources */,
 				5F0EE43F1CB46E88003AD71D /* buttonBG.png in Resources */,
 				5FF5874D1CB45FA500C8248B /* BG.jpg in Resources */,
 				5F5DAE481C9B51CF0038FCD1 /* emergencyicon.png in Resources */,
@@ -307,6 +318,7 @@
 				5FF587471CB459AF00C8248B /* alarm_base2.png in Resources */,
 				5F5DAE221C9B486B0038FCD1 /* LaunchScreen.storyboard in Resources */,
 				5F5DAE1F1C9B486B0038FCD1 /* Assets.xcassets in Resources */,
+				6F4E68281CB49442007D7986 /* technology.png in Resources */,
 				5FB85C731CB474B5001BBDA5 /* lineText4.png in Resources */,
 				5FF587491CB459F300C8248B /* alarm_base3.png in Resources */,
 				5FF587421CB456C700C8248B /* alarm_base.png in Resources */,
