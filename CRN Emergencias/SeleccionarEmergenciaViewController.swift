@@ -13,7 +13,7 @@ class SeleccionarEmergenciaViewController: UIViewController,UIPickerViewDelegate
 
     @IBOutlet weak var descripcionLabel: UILabel!
     
-    let arregloEmergencias = ["Quemaduras","Sangrado","Herido de Bala", "Problemas Cardiacos", "Otro"]
+    let arregloEmergencias = ["Alergias/Anafilaxia","Crisis asmática","Sangrado","Fracturas","Quemaduras","Atragantamiento/Asfixia","Emergencias Diabeticas", "Ataque de ansiedad","Lesiones en la cabeza","Infarto al corazón","Golpe de calor", "Hipotermia","Meningitis", "Envenenamiento/Sustancias peligrosas","Convulsiones/Epilepsia","Picadura/Mordedura","Torceduras/Esguince","Embolia cerebral","Inconsciente"]
     let arregloDescripciones = ["Lesión en los tejidos del cuerpo\ncausado por calor, sustancias químicas, electricidad, \netc ...","Descripción","Descripción","Descripción","Descripción"]
     var emergenciaSeleccionada: String = "Null"
     
@@ -21,7 +21,7 @@ class SeleccionarEmergenciaViewController: UIViewController,UIPickerViewDelegate
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Fondo")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "BG3.jpg")!)
         let preferenciasUsuario = NSUserDefaults.standardUserDefaults()
         preferenciasUsuario.setObject("default", forKey: "emergencia")
         preferenciasUsuario.synchronize()

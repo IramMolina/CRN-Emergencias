@@ -16,7 +16,7 @@ class ObtenerReferenciasViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Fondo")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "BG3.jpg")!)
         // Do any additional setup after loading the view.
     }
 

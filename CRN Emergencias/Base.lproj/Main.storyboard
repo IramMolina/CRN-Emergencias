@@ -226,6 +226,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.98251791389999998" blue="0.97998715709999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Yqh-Jc-Icd"/>
@@ -284,7 +285,6 @@
                                 <exclude reference="tIG-He-bX4"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="WN2-WE-jUa"/>
                                 <exclude reference="DVq-hR-n20"/>
                                 <exclude reference="6UZ-hL-YWB"/>
                                 <exclude reference="Ke3-Ge-aBs"/>
@@ -296,6 +296,7 @@
                                 <exclude reference="JJD-WC-TGU"/>
                                 <exclude reference="agX-lX-ril"/>
                                 <exclude reference="k1n-dk-o1M"/>
+                                <exclude reference="WN2-WE-jUa"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -305,7 +306,6 @@
                                 <include reference="tIG-He-bX4"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="WN2-WE-jUa"/>
                                 <include reference="DVq-hR-n20"/>
                                 <include reference="6UZ-hL-YWB"/>
                                 <include reference="Ke3-Ge-aBs"/>
@@ -317,6 +317,7 @@
                                 <include reference="JJD-WC-TGU"/>
                                 <include reference="agX-lX-ril"/>
                                 <include reference="k1n-dk-o1M"/>
+                                <include reference="WN2-WE-jUa"/>
                             </mask>
                         </variation>
                     </view>
@@ -342,7 +343,7 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gwX-BZ-9Ti">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.84272742146596857" green="0.84272742146596857" blue="0.84272742146596857" alpha="0.088513962765957452" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -691,14 +692,14 @@
                                 <exclude reference="2Fl-Nk-TIc"/>
                                 <exclude reference="XfS-lY-X49"/>
                                 <exclude reference="sxw-zR-hwh"/>
-                                <exclude reference="ywX-9G-Mav"/>
                                 <exclude reference="ODZ-fu-Geg"/>
                                 <exclude reference="fNp-G7-MCb"/>
                                 <exclude reference="0fM-Iv-eUK"/>
                                 <exclude reference="bEl-sA-4b7"/>
                                 <exclude reference="xew-Ym-VLL"/>
-                                <exclude reference="PzD-IT-Tvr"/>
+                                <exclude reference="ywX-9G-Mav"/>
                                 <exclude reference="Hw2-of-dlF"/>
+                                <exclude reference="PzD-IT-Tvr"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -714,9 +715,6 @@
                                 <include reference="XfS-lY-X49"/>
                                 <exclude reference="pMr-Os-gCk"/>
                                 <include reference="sxw-zR-hwh"/>
-                                <exclude reference="464-rs-TEi"/>
-                                <exclude reference="u1J-hK-nDq"/>
-                                <include reference="ywX-9G-Mav"/>
                                 <include reference="ODZ-fu-Geg"/>
                                 <exclude reference="cDt-K9-QYc"/>
                                 <include reference="fNp-G7-MCb"/>
@@ -727,10 +725,13 @@
                                 <exclude reference="fvP-OL-fFW"/>
                                 <exclude reference="oxL-PA-ZLM"/>
                                 <include reference="xew-Ym-VLL"/>
-                                <include reference="PzD-IT-Tvr"/>
-                                <exclude reference="dgx-aZ-1Oq"/>
+                                <exclude reference="464-rs-TEi"/>
+                                <exclude reference="u1J-hK-nDq"/>
+                                <include reference="ywX-9G-Mav"/>
                                 <include reference="Hw2-of-dlF"/>
                                 <exclude reference="aEp-Ko-m5L"/>
+                                <include reference="PzD-IT-Tvr"/>
+                                <exclude reference="dgx-aZ-1Oq"/>
                             </mask>
                         </variation>
                     </view>
@@ -772,6 +773,6 @@
         <image name="technology.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="I3N-ba-MjK"/>
+        <segue reference="Mua-LW-5TT"/>
     </inferredMetricsTieBreakers>
 </document>
