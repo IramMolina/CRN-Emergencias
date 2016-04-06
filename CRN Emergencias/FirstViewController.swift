@@ -19,30 +19,38 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     var latitudUsuario: Double = 0.0
     var longitudUsuario: Double = 0.0
     
+    var servicioUbicacionIniciado: Bool = false
     
     @IBAction func onPayNowButtonTapped(longTapButton: ANLongTapButton)
     {
-        longTapButton.didTimePeriodElapseBlock = { () -> Void in
-            let alert = UIAlertController(title: "Payment", message: "Payment has been made.", preferredStyle:   UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+        
+        if !servicioUbicacionIniciado {
+            self.administradorDeUbicacion.startUpdatingLocation()
+            servicioUbicacionIniciado = true
         }
+        
+        longTapButton.didTimePeriodElapseBlock = { () -> Void in
+            self.performSegueWithIdentifier("segueSeleccionarEmergencia", sender: self)
+        }
+        
     }
     
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Fondo")!)
         
         
+        // Ubicación
         self.administradorDeUbicacion.delegate = self
-        
         self.administradorDeUbicacion.desiredAccuracy = kCLLocationAccuracyBest
-        
         self.administradorDeUbicacion.requestWhenInUseAuthorization()
         
-        self.administradorDeUbicacion.startUpdatingLocation()
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,15 +60,16 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBAction func BotonLlamar_Accion(sender: UIButton) {
         
-        let phone = "tel://7225857373";
-        let url : NSURL = NSURL(string:phone)!;
-        UIApplication.sharedApplication().openURL(url);
+        let phone = "tel://7225857373"
+        let url : NSURL = NSURL(string:phone)!
+        UIApplication.sharedApplication().openURL(url)
         
         
     }
     
-
+    // MARK: - Auxiliares
     
+
     
     // MARK: - Métodos de Ubicación
     
@@ -69,13 +78,18 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         
         let coordenadas = CLLocationCoordinate2D(latitude: ubicacion!.coordinate.latitude, longitude: ubicacion!.coordinate.longitude)
         
-        self.latitudUsuario = coordenadas.latitude
-        self.longitudUsuario = coordenadas.longitude
+    
         
-        print(coordenadas)
+        let preferenciasUsuario = NSUserDefaults.standardUserDefaults()
+        
+        preferenciasUsuario.setObject(coordenadas.latitude, forKey: "latitud")
+        preferenciasUsuario.setObject(coordenadas.longitude, forKey: "longitud")
+        
+        preferenciasUsuario.synchronize()
+        
+
         
         self.administradorDeUbicacion.stopUpdatingLocation()
-        
         
     }
 
