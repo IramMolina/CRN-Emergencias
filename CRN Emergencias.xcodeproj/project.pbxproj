@@ -272,7 +272,7 @@
 				TargetAttributes = {
 					5F5DAE111C9B486B0038FCD1 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = LPY3WE22LZ;
+						DevelopmentTeam = C2U3LE7375;
 					};
 					5F5DAE271C9B486B0038FCD1 = {
 						CreatedOnToolsVersion = 7.2;
@@ -508,7 +508,7 @@
 				INFOPLIST_FILE = "CRN Emergencias/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.CRN-Emergencias";
+				PRODUCT_BUNDLE_IDENTIFIER = "dreamTeam.itesm.CRN-Emergencias";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CRN Emergencias/CRN Emergencias-Bridging-Header.h";
@@ -526,7 +526,7 @@
 				INFOPLIST_FILE = "CRN Emergencias/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.CRN-Emergencias";
+				PRODUCT_BUNDLE_IDENTIFIER = "dreamTeam.itesm.CRN-Emergencias";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CRN Emergencias/CRN Emergencias-Bridging-Header.h";

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistroInformacionViewController: UIViewController, UIGestureRecognizerDelegate {
+class RegistroInformacionViewController: UIViewController{
 
     @IBOutlet weak var nombreTextField: UITextField!
     @IBOutlet weak var apellidoTextField: UITextField!
@@ -21,8 +21,14 @@ class RegistroInformacionViewController: UIViewController, UIGestureRecognizerDe
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Fondo")!)
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegistroInformacionViewController.quitarTeclado))
+        self.view.addGestureRecognizer(tap)
 
         
+    }
+    
+    func quitarTeclado(){
+        self.view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {

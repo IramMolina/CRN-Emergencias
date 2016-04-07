@@ -595,6 +595,9 @@
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="20" y="215" width="360" height="30"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="Egr-yN-tU8" id="f7y-vH-6n7"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Apellido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atR-3y-8AW">
                                 <rect key="frame" x="20" y="153" width="62" height="21"/>
@@ -627,6 +630,9 @@
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="20" y="128" width="360" height="30"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="Egr-yN-tU8" id="rsl-ii-So1"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tF-3l-0GB">
                                 <rect key="frame" x="20" y="76" width="62" height="21"/>
@@ -773,6 +779,6 @@
         <image name="technology.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mua-LW-5TT"/>
+        <segue reference="I3N-ba-MjK"/>
     </inferredMetricsTieBreakers>
 </document>
