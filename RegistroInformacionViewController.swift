@@ -16,12 +16,10 @@ class RegistroInformacionViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Do any additional setup after loading the view.
-        
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Fondo")!)
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegistroInformacionViewController.quitarTeclado))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "quitarTeclado")
         self.view.addGestureRecognizer(tap)
 
         
@@ -38,7 +36,12 @@ class RegistroInformacionViewController: UIViewController{
     
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        segue.destinationViewController
+        
+        
+        
+    }
+    
+    @IBAction func botonEmpezar(sender: AnyObject) {
         
         let preferenciasUsuario = NSUserDefaults.standardUserDefaults()
         
@@ -46,8 +49,19 @@ class RegistroInformacionViewController: UIViewController{
         preferenciasUsuario.setObject(apellidoTextField.text!, forKey: "apellido")
         
         preferenciasUsuario.synchronize()
+        
+        let avisoImportancia = UIAlertController(title: "Aviso", message: "Esta aplicación es delicada, así que no bromas.", preferredStyle: .Alert)
+        avisoImportancia.addAction(UIAlertAction(title: "Aceptar", style: .Default, handler: { (UIAlertAction) -> Void in
+            self.performSegueWithIdentifier("inicio", sender: self)
+        }))
+        avisoImportancia.addAction(UIAlertAction(title: "Cancelar", style: .Destructive, handler: { (UIAlertAction) -> Void in
+            UIControl().sendAction(Selector("suspend"), to: UIApplication.sharedApplication(), forEvent: nil)
+        }))
+        
+        self.presentViewController(avisoImportancia, animated: true, completion: nil)
+        
+        
     }
-    
  
     /*
     // MARK: - Navigation

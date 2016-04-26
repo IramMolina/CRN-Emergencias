@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +16,39 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" image="LogoCRN.png" translatesAutoresizingMaskIntoConstraints="NO" id="zZq-X6-HE1">
+                                <rect key="frame" x="180" y="179" width="240" height="243"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="243" id="qFv-66-hGX"/>
+                                    <constraint firstAttribute="width" secondItem="zZq-X6-HE1" secondAttribute="height" multiplier="80:81" id="vlK-VB-OUa"/>
+                                    <constraint firstAttribute="width" constant="240" id="x0v-0F-Zn6"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MAK-ut-pzn">
+                                <rect key="frame" x="282" y="489" width="37" height="37"/>
+                                <color key="color" white="0.64017932050000004" alpha="0.70091594830000004" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emergencias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNH-Is-IaH">
+                                <rect key="frame" x="195" y="52" width="210" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Loy-n5-e78"/>
+                                    <constraint firstAttribute="width" constant="210" id="fEp-b4-ic5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="35"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="MAK-ut-pzn" secondAttribute="bottom" constant="74" id="24L-4j-z85"/>
+                            <constraint firstItem="pNH-Is-IaH" firstAttribute="centerX" secondItem="zZq-X6-HE1" secondAttribute="centerX" id="Bp4-Dw-dVX"/>
+                            <constraint firstItem="MAK-ut-pzn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="LjV-dh-Hpq"/>
+                            <constraint firstItem="pNH-Is-IaH" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="32" id="NAI-kz-1iK"/>
+                            <constraint firstItem="zZq-X6-HE1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="aMa-R0-SXh"/>
+                            <constraint firstItem="zZq-X6-HE1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="suM-hr-7rr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +56,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LogoCRN.png" width="500" height="500"/>
+    </resources>
 </document>

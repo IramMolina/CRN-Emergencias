@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5F0EE4371CB467D4003AD71D /* alarm_base5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F0EE4361CB467D4003AD71D /* alarm_base5.png */; };
-		5F0EE43B1CB46AA5003AD71D /* BG2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F0EE4381CB46AA5003AD71D /* BG2.jpg */; };
-		5F0EE43C1CB46AA5003AD71D /* BG3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F0EE4391CB46AA5003AD71D /* BG3.jpg */; };
-		5F0EE43D1CB46AA5003AD71D /* BG4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F0EE43A1CB46AA5003AD71D /* BG4.jpg */; };
 		5F0EE43F1CB46E88003AD71D /* buttonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F0EE43E1CB46E88003AD71D /* buttonBG.png */; };
 		5F5DAE161C9B486B0038FCD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5DAE151C9B486B0038FCD1 /* AppDelegate.swift */; };
 		5F5DAE181C9B486B0038FCD1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5DAE171C9B486B0038FCD1 /* FirstViewController.swift */; };
@@ -20,7 +17,7 @@
 		5F5DAE221C9B486B0038FCD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5DAE201C9B486B0038FCD1 /* LaunchScreen.storyboard */; };
 		5F5DAE2D1C9B486B0038FCD1 /* CRN_EmergenciasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5DAE2C1C9B486B0038FCD1 /* CRN_EmergenciasTests.swift */; };
 		5F5DAE381C9B486B0038FCD1 /* CRN_EmergenciasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5DAE371C9B486B0038FCD1 /* CRN_EmergenciasUITests.swift */; };
-		5F5DAE481C9B51CF0038FCD1 /* emergencyicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F5DAE471C9B51CF0038FCD1 /* emergencyicon.png */; };
+		5F805CC41CCFD76E00EE1780 /* LogoCRN.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F805CC31CCFD76E00EE1780 /* LogoCRN.png */; };
 		5F8EFE301CB48697003B4F76 /* RegistroInformacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EFE2F1CB48697003B4F76 /* RegistroInformacionViewController.swift */; };
 		5F8EFE341CB4A53D003B4F76 /* SeleccionarEmergenciaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EFE331CB4A53D003B4F76 /* SeleccionarEmergenciaViewController.swift */; };
 		5F8EFE361CB4AACF003B4F76 /* ObtenerReferenciasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EFE351CB4AACF003B4F76 /* ObtenerReferenciasViewController.swift */; };
@@ -28,13 +25,6 @@
 		5FB85C751CB47558001BBDA5 /* lineText6.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FB85C741CB47558001BBDA5 /* lineText6.png */; };
 		5FF5873F1CB4512200C8248B /* ANLongTapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF5873D1CB4512200C8248B /* ANLongTapButton.swift */; };
 		5FF587401CB4512200C8248B /* NSTimer+Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF5873E1CB4512200C8248B /* NSTimer+Closure.swift */; };
-		5FF587421CB456C700C8248B /* alarm_base.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FF587411CB456C700C8248B /* alarm_base.png */; };
-		5FF587451CB4595300C8248B /* alarm_base1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FF587441CB4595300C8248B /* alarm_base1.png */; };
-		5FF587471CB459AF00C8248B /* alarm_base2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FF587461CB459AF00C8248B /* alarm_base2.png */; };
-		5FF587491CB459F300C8248B /* alarm_base3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FF587481CB459F300C8248B /* alarm_base3.png */; };
-		5FF5874B1CB45A3B00C8248B /* alarm_base4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FF5874A1CB45A3B00C8248B /* alarm_base4.png */; };
-		5FF5874D1CB45FA500C8248B /* BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5FF5874C1CB45FA500C8248B /* BG.jpg */; };
-		6F4E68201CB4936E007D7986 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F4E681F1CB4936E007D7986 /* avatar.png */; };
 		6F4E68271CB49442007D7986 /* medical.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F4E68251CB49442007D7986 /* medical.png */; };
 		6F4E68281CB49442007D7986 /* technology.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F4E68261CB49442007D7986 /* technology.png */; };
 /* End PBXBuildFile section */
@@ -58,9 +48,6 @@
 
 /* Begin PBXFileReference section */
 		5F0EE4361CB467D4003AD71D /* alarm_base5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_base5.png; sourceTree = "<group>"; };
-		5F0EE4381CB46AA5003AD71D /* BG2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BG2.jpg; sourceTree = "<group>"; };
-		5F0EE4391CB46AA5003AD71D /* BG3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BG3.jpg; sourceTree = "<group>"; };
-		5F0EE43A1CB46AA5003AD71D /* BG4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BG4.jpg; sourceTree = "<group>"; };
 		5F0EE43E1CB46E88003AD71D /* buttonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonBG.png; sourceTree = "<group>"; };
 		5F5DAE121C9B486B0038FCD1 /* CRN Emergencias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CRN Emergencias.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5DAE151C9B486B0038FCD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +63,7 @@
 		5F5DAE331C9B486B0038FCD1 /* CRN EmergenciasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CRN EmergenciasUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5DAE371C9B486B0038FCD1 /* CRN_EmergenciasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRN_EmergenciasUITests.swift; sourceTree = "<group>"; };
 		5F5DAE391C9B486B0038FCD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5F5DAE471C9B51CF0038FCD1 /* emergencyicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emergencyicon.png; sourceTree = "<group>"; };
+		5F805CC31CCFD76E00EE1780 /* LogoCRN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoCRN.png; sourceTree = "<group>"; };
 		5F8EFE2B1CB4866A003B4F76 /* CRN Emergencias-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CRN Emergencias-Bridging-Header.h"; sourceTree = "<group>"; };
 		5F8EFE2F1CB48697003B4F76 /* RegistroInformacionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegistroInformacionViewController.swift; path = ../RegistroInformacionViewController.swift; sourceTree = "<group>"; };
 		5F8EFE331CB4A53D003B4F76 /* SeleccionarEmergenciaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleccionarEmergenciaViewController.swift; sourceTree = "<group>"; };
@@ -85,13 +72,6 @@
 		5FB85C741CB47558001BBDA5 /* lineText6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineText6.png; sourceTree = "<group>"; };
 		5FF5873D1CB4512200C8248B /* ANLongTapButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANLongTapButton.swift; sourceTree = "<group>"; };
 		5FF5873E1CB4512200C8248B /* NSTimer+Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+Closure.swift"; sourceTree = "<group>"; };
-		5FF587411CB456C700C8248B /* alarm_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_base.png; sourceTree = "<group>"; };
-		5FF587441CB4595300C8248B /* alarm_base1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_base1.png; sourceTree = "<group>"; };
-		5FF587461CB459AF00C8248B /* alarm_base2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_base2.png; sourceTree = "<group>"; };
-		5FF587481CB459F300C8248B /* alarm_base3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_base3.png; sourceTree = "<group>"; };
-		5FF5874A1CB45A3B00C8248B /* alarm_base4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_base4.png; sourceTree = "<group>"; };
-		5FF5874C1CB45FA500C8248B /* BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BG.jpg; sourceTree = "<group>"; };
-		6F4E681F1CB4936E007D7986 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		6F4E68251CB49442007D7986 /* medical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medical.png; sourceTree = "<group>"; };
 		6F4E68261CB49442007D7986 /* technology.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = technology.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,7 +124,6 @@
 		5F5DAE141C9B486B0038FCD1 /* CRN Emergencias */ = {
 			isa = PBXGroup;
 			children = (
-				6F4E681F1CB4936E007D7986 /* avatar.png */,
 				5FF587431CB456D100C8248B /* Assets */,
 				5F5DAE151C9B486B0038FCD1 /* AppDelegate.swift */,
 				5F5DAE171C9B486B0038FCD1 /* FirstViewController.swift */,
@@ -157,7 +136,6 @@
 				5FF5873D1CB4512200C8248B /* ANLongTapButton.swift */,
 				5FF5873E1CB4512200C8248B /* NSTimer+Closure.swift */,
 				5F5DAE201C9B486B0038FCD1 /* LaunchScreen.storyboard */,
-				5F5DAE471C9B51CF0038FCD1 /* emergencyicon.png */,
 				5F5DAE231C9B486B0038FCD1 /* Info.plist */,
 				5F8EFE2B1CB4866A003B4F76 /* CRN Emergencias-Bridging-Header.h */,
 			);
@@ -185,19 +163,11 @@
 		5FF587431CB456D100C8248B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5F805CC31CCFD76E00EE1780 /* LogoCRN.png */,
 				6F4E68251CB49442007D7986 /* medical.png */,
 				6F4E68261CB49442007D7986 /* technology.png */,
-				5F0EE4381CB46AA5003AD71D /* BG2.jpg */,
-				5F0EE43A1CB46AA5003AD71D /* BG4.jpg */,
-				5FF587441CB4595300C8248B /* alarm_base1.png */,
-				5FF587411CB456C700C8248B /* alarm_base.png */,
-				5FF587461CB459AF00C8248B /* alarm_base2.png */,
-				5FF587481CB459F300C8248B /* alarm_base3.png */,
-				5FF5874A1CB45A3B00C8248B /* alarm_base4.png */,
 				5F0EE4361CB467D4003AD71D /* alarm_base5.png */,
-				5F0EE4391CB46AA5003AD71D /* BG3.jpg */,
 				5FB85C721CB474B5001BBDA5 /* lineText4.png */,
-				5FF5874C1CB45FA500C8248B /* BG.jpg */,
 				5F0EE43E1CB46E88003AD71D /* buttonBG.png */,
 				5FB85C741CB47558001BBDA5 /* lineText6.png */,
 			);
@@ -310,23 +280,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F4E68271CB49442007D7986 /* medical.png in Resources */,
-				6F4E68201CB4936E007D7986 /* avatar.png in Resources */,
 				5F0EE43F1CB46E88003AD71D /* buttonBG.png in Resources */,
-				5FF5874D1CB45FA500C8248B /* BG.jpg in Resources */,
-				5F5DAE481C9B51CF0038FCD1 /* emergencyicon.png in Resources */,
-				5F0EE43C1CB46AA5003AD71D /* BG3.jpg in Resources */,
-				5FF587471CB459AF00C8248B /* alarm_base2.png in Resources */,
+				5F805CC41CCFD76E00EE1780 /* LogoCRN.png in Resources */,
 				5F5DAE221C9B486B0038FCD1 /* LaunchScreen.storyboard in Resources */,
 				5F5DAE1F1C9B486B0038FCD1 /* Assets.xcassets in Resources */,
 				6F4E68281CB49442007D7986 /* technology.png in Resources */,
 				5FB85C731CB474B5001BBDA5 /* lineText4.png in Resources */,
-				5FF587491CB459F300C8248B /* alarm_base3.png in Resources */,
-				5FF587421CB456C700C8248B /* alarm_base.png in Resources */,
-				5FF587451CB4595300C8248B /* alarm_base1.png in Resources */,
-				5F0EE43D1CB46AA5003AD71D /* BG4.jpg in Resources */,
 				5F0EE4371CB467D4003AD71D /* alarm_base5.png in Resources */,
-				5F0EE43B1CB46AA5003AD71D /* BG2.jpg in Resources */,
-				5FF5874B1CB45A3B00C8248B /* alarm_base4.png in Resources */,
 				5FB85C751CB47558001BBDA5 /* lineText6.png in Resources */,
 				5F5DAE1D1C9B486B0038FCD1 /* Main.storyboard in Resources */,
 			);

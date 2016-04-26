@@ -21,7 +21,7 @@ class SeleccionarEmergenciaViewController: UIViewController,UIPickerViewDelegate
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "BG3.jpg")!)
+       
         let preferenciasUsuario = NSUserDefaults.standardUserDefaults()
         preferenciasUsuario.setObject("default", forKey: "emergencia")
         preferenciasUsuario.synchronize()
