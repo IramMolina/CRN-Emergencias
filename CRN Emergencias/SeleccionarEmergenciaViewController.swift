@@ -14,7 +14,7 @@ class SeleccionarEmergenciaViewController: UIViewController,UIPickerViewDelegate
     @IBOutlet weak var descripcionLabel: UILabel!
     
     let arregloEmergencias = ["Alergias/Anafilaxia","Crisis asmática","Sangrado","Fracturas","Quemaduras","Atragantamiento/Asfixia","Emergencias Diabeticas", "Ataque de ansiedad","Lesiones en la cabeza","Infarto al corazón","Golpe de calor", "Hipotermia","Meningitis", "Envenenamiento/Sustancias peligrosas","Convulsiones/Epilepsia","Picadura/Mordedura","Torceduras/Esguince","Embolia cerebral","Inconsciente"]
-    let arregloDescripciones = ["Lesión en los tejidos del cuerpo\ncausado por calor, sustancias químicas, electricidad, \netc ...","Descripción","Descripción","Descripción","Descripción"]
+    let arregloDescripciones = ["Lesión en los tejidos del cuerpo\ncausado por calor, sustancias químicas, electricidad, \netc ...","Descripción","Descripción","Descripción","Descripción","Descripción","Descripción","Descripción","Descripción","Descripción","Descripción","Descripción"]
     var emergenciaSeleccionada: String = "Null"
     
     override func viewDidLoad() {
