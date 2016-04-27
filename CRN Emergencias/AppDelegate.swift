@@ -15,7 +15,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        
+        let registroInformacionViewController: RegistroInformacionViewController = mainStoryboard.instantiateViewControllerWithIdentifier("RegistroInformacion") as! RegistroInformacionViewController
+        
+        let tabBarController: UITabBarController = mainStoryboard.instantiateViewControllerWithIdentifier("LobbyTabBar") as! UITabBarController
+        
+        
+        if NSUserDefaults.standardUserDefaults().stringForKey("nombre") != nil {
+            self.window?.rootViewController = tabBarController
+        }
+        else{
+            self.window?.rootViewController = registroInformacionViewController
+        }
+        
+        
+        self.window?.makeKeyAndVisible()
+        
+        
         return true
     }
 

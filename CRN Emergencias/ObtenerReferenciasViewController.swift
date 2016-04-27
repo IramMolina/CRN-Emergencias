@@ -8,22 +8,164 @@
 
 import UIKit
 import MessageUI
+import CoreLocation
+import MapKit
 
-class ObtenerReferenciasViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, MFMailComposeViewControllerDelegate, UITextViewDelegate {
 
+    // MARK: - Outlets y Objetos
     @IBOutlet weak var referenciasTextView: UITextView!
+    @IBOutlet weak var mapaMapKitView: MKMapView!
     
+
+    // MARK: - Variables
+    private let objetoLocationManager = CLLocationManager()
+    private var textViewEditando = false
+    private var referenciaDada = false
+    private var referenciaString: String = ""
+    
+    // MARK: - Config Inicial
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "BG3.jpg")!)
         // Do any additional setup after loading the view.
+        // CORE LOCATION
+        self.configurarCoreLocation()
+        
+        // DISMISS KEYBOARD
+        // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ObtenerReferenciasViewController.quitarTeclado))
+        self.view.addGestureRecognizer(tap)
+       
+        
     }
-
+    
+    func quitarTeclado(){
+        self.view.endEditing(true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    // MARK: - Funciones de Interfaz
+    
+    // Cancelar el reporte
+    @IBAction func cancelarReporte(sender: AnyObject) {
+               
+        let alertaSalida = UIAlertController(title: "Salir", message: "¿Desea cancelar el reporte de emergencia?", preferredStyle: .Alert)
+        
+        alertaSalida.addAction(UIAlertAction(title: "Permanecer", style: .Default, handler: nil))
+        alertaSalida.addAction(UIAlertAction(title: "Salir", style: .Destructive, handler: { (UIAlertAction) in
+            self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+        }))
+        
+        self.presentViewController(alertaSalida, animated: true, completion: nil)
+    }
+    
+    
+    // MARK: - Funciones CoreLocation DELEGADO
+    
+    // Configurar
+    func configurarCoreLocation(){
+        objetoLocationManager.delegate = self
+        objetoLocationManager.desiredAccuracy = kCLLocationAccuracyBest
+        objetoLocationManager.requestWhenInUseAuthorization()
+    }
+    // Autorización de Ubicación
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == CLAuthorizationStatus.AuthorizedWhenInUse || status == CLAuthorizationStatus.AuthorizedAlways{
+            objetoLocationManager.startUpdatingLocation()
+            mapaMapKitView.showsUserLocation = true
+        }
+        else{
+            objetoLocationManager.stopUpdatingLocation()
+            
+            let alertaUbicacion = UIAlertController(title: "Aviso", message: "Se necesita habilitar el servicio de Ubicación para emitir la alerta", preferredStyle: .Alert)
+            alertaUbicacion.addAction(UIAlertAction(title: "Aceptar", style: .Default, handler: nil))
+            self.presentViewController(alertaUbicacion, animated: true, completion: nil)
+        
+        }
+    }
+    
+    // Actualizar Ubicación
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last!.coordinate
+        
+        mapaMapKitView.setCenterCoordinate(location, animated: false)
+        mapaMapKitView.setRegion(MKCoordinateRegion(center: location,span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta:  0.01)), animated: false)
+        
+        let preferenciasUsuario = NSUserDefaults.standardUserDefaults()
+        
+        preferenciasUsuario.setObject(location.latitude, forKey: "latitud")
+        preferenciasUsuario.setObject(location.longitude, forKey: "longitud")
+        
+        preferenciasUsuario.synchronize()
+        
+        
+        
+        manager.stopUpdatingLocation()
+        
+        print("\(location)")
+    }
+    // Con error
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Falló geolocalización")
+    }
+    
+    // MARK: - Funciones MapKit DELEGADO
+    
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+       print("Exito")
+    }
+    
+    
+    // MARK: - Funciones TextView - DELEGADO
+    func textViewDidBeginEditing(textView: UITextView) {
+        if !textViewEditando {
+            textViewEditando = true
+            referenciasTextView.text = ""
+            referenciasTextView.textColor = UIColor.darkGrayColor()
+        }
+    }
+    
+    // Quitar teclado cuando se de en Aceptar
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        
+        if textView.text == "" {
+            referenciaString = "Ninguna"
+        }
+        else{
+            referenciaString = textView.text
+        }
+        
+        print(referenciaString)
+        
+        if text == "\n" {
+            
+            // Asignar el valor del string
+            
+            textView.resignFirstResponder()
+            return false
+        }
+        
+        return true
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        if textView.text == "" {
+            referenciaString = "Ninguna"
+        }
+        else{
+            referenciaString = textView.text
+        }
+        
+        print(referenciaString)
+    }
+    
+    // MARK: - Funciones Enviar
+    
     
     @IBAction func EmularEnvio(sender: AnyObject) {
         
@@ -37,7 +179,7 @@ class ObtenerReferenciasViewController: UIViewController, MFMailComposeViewContr
         let urlMaps = "http://maps.google.com/maps?q=\(latitud),\(longitud)"
         
         let mensaje = "Se enviará:\nNombre: \(nombre) \(apellido)\nEmergencia: \(emergencia)\nCoordenadas: \(latitud) \(longitud)"
-        
+        print(mensaje)
         let mailComposeViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
             self.presentViewController(mailComposeViewController, animated: true, completion: nil)
