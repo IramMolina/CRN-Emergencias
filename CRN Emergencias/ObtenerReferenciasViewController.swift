@@ -177,6 +177,8 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
         let latitud = preferenciasUsuario.stringForKey("latitud")!
         let longitud = preferenciasUsuario.stringForKey("longitud")!
         let urlMaps = "http://maps.google.com/maps?q=\(latitud),\(longitud)"
+        let telefono = preferenciasUsuario.stringForKey("telefono")!
+
         
         let mensaje = "Se enviará:\nNombre: \(nombre) \(apellido)\nEmergencia: \(emergencia)\nCoordenadas: \(latitud) \(longitud)"
         print(mensaje)
@@ -199,6 +201,7 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
         //Apellido entry.790203585
         //Emergencia entry.1100998756
         //Localizacion entry.794367441
+        //Telefono entry.1874484554
         
         //Envio de datos a googly form
         let direccion = "https://docs.google.com/forms/d/1PhVKIBESG5KdAwErQpJCpCSkrcYEvDM-aPmmttJQxZw/formResponse"
@@ -209,7 +212,7 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
             let request = NSMutableURLRequest(URL: url)
             request.HTTPMethod = "POST"
             
-            let cadenaDatos = "entry.865888786=\(nombre)&entry.790203585=\(apellido)&entry.1100998756=\(emergencia)&entry.794367441=\(urlMaps)"
+            let cadenaDatos = "entry.865888786=\(nombre)&entry.790203585=\(apellido)&entry.1100998756=\(emergencia)&entry.794367441=\(urlMaps)&entry.1874484554=\(telefono)"
             
             let cadenaAcentos = cadenaDatos.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
             let datosBin = cadenaAcentos?.dataUsingEncoding(NSUTF8StringEncoding)
@@ -242,8 +245,10 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
         let latitud = preferenciasUsuario.stringForKey("latitud")!
         let longitud = preferenciasUsuario.stringForKey("longitud")!
         let urlMaps = "http://maps.google.com/maps?q=\(latitud),\(longitud)"
+        let telefono = preferenciasUsuario.stringForKey("telefono")!
+
         
-        let mensaje = "Se enviará:\nNombre: \(nombre) \(apellido)\nEmergencia: \(emergencia)\nCoordenadas: \(urlMaps)"
+        let mensaje = "Se enviará:\nNombre: \(nombre) \(apellido)\nEmergencia: \(emergencia)\nTelefono: \(telefono)\nCoordenadas: \(urlMaps)"
         
         mailComposerVC.setToRecipients(["araizaga.yael@gmail.com"])
         mailComposerVC.setSubject("Prueba de correo")
