@@ -23,6 +23,7 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
     private var textViewEditando = false
     private var referenciaDada = false
     private var referenciaString: String = ""
+    private var posicion: CLLocation?
     
     // MARK: - Config Inicial
     override func viewDidLoad() {
@@ -92,6 +93,7 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
     // Actualizar Ubicación
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last!.coordinate
+        posicion = locations.last!
         
         mapaMapKitView.setCenterCoordinate(location, animated: false)
         mapaMapKitView.setRegion(MKCoordinateRegion(center: location,span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta:  0.01)), animated: false)
@@ -117,7 +119,7 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
     // MARK: - Funciones MapKit DELEGADO
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-       print("Exito")
+       //print("Exito")
     }
     
     
@@ -187,6 +189,7 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
             self.presentViewController(mailComposeViewController, animated: true, completion: nil)
         } else {
             self.showSendMailErrorAlert()
+            
         }
         /*
         let alerta = UIAlertController(title: "Confirmar envío", message:
@@ -218,8 +221,8 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
             let datosBin = cadenaAcentos?.dataUsingEncoding(NSUTF8StringEncoding)
             let tarea = sesion.uploadTaskWithRequest(request, fromData: datosBin, completionHandler: { (datos, response, error) in
                 //Success
-                let cadena = NSString(data: datos!, encoding: NSUTF8StringEncoding)
-                print(cadena)
+                //let cadena = NSString(data: datos!, encoding: NSUTF8StringEncoding)
+                //print(cadena)
             })
             tarea.resume()
             
@@ -258,14 +261,15 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
     }
     
     func showSendMailErrorAlert() {
-        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
-        sendMailErrorAlert.show()
+        
+        let sendMailErrorAlert = UIAlertView(title: "No se pudo enviar el mail", message: "Tu dispositivo no pudo enviar el e-mail.  Por favor revisa la configuración de mail e intenta de nuevo.", delegate: self, cancelButtonTitle: "OK")
+            sendMailErrorAlert.show()
     }
     
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
     /*
     // MARK: - Navigation
 
