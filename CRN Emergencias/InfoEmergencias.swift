@@ -13,14 +13,17 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class InfoEmergencias: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var espera: UIActivityIndicatorView!
+    
     //variable de instancia
     internal var emergencia = ""
     internal var numEmergencia = 0
     
+    @IBOutlet weak var table: UITableView!
+    //@IBOutlet weak var imageNum: UIImageView!
+
     
     let arrPasos = [["La persona puede desarrollar una erupción cutánea, picazón o hinchazón en sus manos, pies o cara. Su respiración puede ser más lenta. Puede ocurrir vómito y diarrea. Causas comunes de una reacción alérgica son el polen, piquetes de insectos, látex y algunos productos alimenticios, como nueces o productos lácteos."
-,"Si la persona sufre de anafilaxia o problemas para respirar, llame a la Cruz Roja. Si la persona conoce que padece reacciones anafilácticas (problemas respiratorios, shock o cambios en su estado mental) llame inmediatamente a la Cruz Roja o pida a alguien más que lo haga.","Tranquilice frecuentemente al paciente al paciente en lo que llega la ambulancia."],["Demuestre que usted está escuchando a la persona y con calma pregunte cómo puede ayudar. Usted debe tratar de establecer la confianza mostrándole respeto.","Sea considerado de o que está pasando a su alrededor y lo que necesitan. Recuerde que las personas pueden tener dificultades para hacerle saber lo que necesitan.","Es posible que la persona se encuentre hiperventilando o respirando muy rápido, esto producirá que las manos y la cara se le duerman, estos síntomas se revertirán si respira normalmente. Esta condición es muy común, tranquilice a la persona e intente que respire de una forma pausada y controlada. Se sentirá mucho mejor si logra esto."],["Golpee firmemente en la espalda entre los omóplatos   5 veces para desalojar el objeto. A continuación, dar 5 compresiones abdominales rápidas. Esto crea una fuerte vibración y presión en la vía aérea, que a menudo es suficiente para eliminar el atragantamiento. En cuanto el objeto desobstruya la vía aérea podrá respirar de nuevo.","Llame a la Cruz Roja si el nivel de conciencia está alterado, la voz cambia, si no se ha podido despejar la vía aérea o si está preocupado."],["No los sujete, pero sí ponga una almohada o algo de ropa bajo su cabeza, para protegerlos de golpes. Si le es posible sostenga gentilmente su cabeza evitando que los movimientos hagan que la golpee contra el suelo. No introduzca ningún objeto en su boca.","Después de la convulsión, gire a la persona de lado con la cabeza inclinada hacia atrás. Esto permitirá que siga respirando y permitirá que cualquier fluido drene por la boca.","La persona puede tardar unos minutos en reaccionar, no se alarme, esto es normal. Con el paso del tiempo la persona recobrará todas sus facultades.","Si es posible investigue las posibles causas de las convulsiones. Si se desconoce la causa o fue por un golpe en la cabeza llame a la Cruz Roja o pida que alguien más lo haga."],
+,"Si la persona sufre de anafilaxia o problemas para respirar, llame a la Cruz Roja. Si la persona conoce que padece reacciones anafilácticas (problemas respiratorios, shock o cambios en su estado mental) llame inmediatamente a la Cruz Roja o pida a alguien más que lo haga.","Tranquilice frecuentemente al paciente al paciente en lo que llega la ambulancia."],["Demuestre que usted está escuchando a la persona y con calma pregunte cómo puede ayudar. Usted debe tratar de establecer la confianza mostrándole respeto.","Sea considerado de o que está pasando a su alrededor y lo que necesitan. Recuerde que las personas pueden tener dificultades para hacerle saber lo que necesitan.","Es posible que la persona se encuentre hiperventilando o respirando muy rápido, esto producirá que las manos y la cara se le duerman, estos síntomas se revertirán si respira normalmente. Esta condición es muy común, tranquilice a la persona e intente que respire de una forma pausada y controlada. Se sentirá mucho mejor si logra esto."],["Golpee firmemente en la espalda entre los omóplatos 5 veces para desalojar el objeto. A continuación, dar 5 compresiones abdominales rápidas. Esto crea una fuerte vibración y presión en la vía aérea, que a menudo es suficiente para eliminar el atragantamiento. En cuanto el objeto desobstruya la vía aérea podrá respirar de nuevo.","Llame a la Cruz Roja si el nivel de conciencia está alterado, la voz cambia, si no se ha podido despejar la vía aérea o si está preocupado."],["No los sujete, pero sí ponga una almohada o algo de ropa bajo su cabeza, para protegerlos de golpes. Si le es posible sostenga gentilmente su cabeza evitando que los movimientos hagan que la golpee contra el suelo. No introduzca ningún objeto en su boca.","Después de la convulsión, gire a la persona de lado con la cabeza inclinada hacia atrás. Esto permitirá que siga respirando y permitirá que cualquier fluido drene por la boca.","La persona puede tardar unos minutos en reaccionar, no se alarme, esto es normal. Con el paso del tiempo la persona recobrará todas sus facultades.","Si es posible investigue las posibles causas de las convulsiones. Si se desconoce la causa o fue por un golpe en la cabeza llame a la Cruz Roja o pida que alguien más lo haga."],
                     ["Ayude a la persona a sentarse en una posición cómoda y ayude en la administración de su medicamento. Usar un inhalador relaja los músculos, permitiendo abrir las vías aéreas y ayudando a la persona a respirar.","Tranquilice a la persona, si la crisis se vuelve severa, no cuenta con el medicamento o no mejora con el medicamento, llame a la Cruz Roja o pida que alguien más lo haga."],["Cara: ¿Hay debilidad en algún lugar de la cara? Brazos: ¿Pueden levantar ambos brazos?  Habla: ¿Se entiende claramente lo que dicen? Las embolias cerebrales son causadas por una interrupción de la irrigación de la sangre en el cerebro. Parte del cerebro se daña y esto puede afectarla apariencia de la persona, funciones corporales, habla y vista. ","Llame de inmediato a la Cruz Roja o pida que alguien más lo haga. Una embolia necesita atención médica inmediata. Entre más pronto reciba la ayuda la persona, será menor el daño que le puede ocasionar.","Hable con la persona para darle confianza mientras espera a la ambulancia."],
                     ["En caso de hipoglicemia (baja de azúcar) Dele algo que contenga azúcar, como tabletas de azúcar, jugo de naranja, el azúcar que contiene el chocolate o una bebida no dietética. Si la persona ya está inconsciente o no está segura de poder tragar NO INTENTE darle nada por la boca ya que puede bloquear la vía aérea.","Tranquilice a la persona, Llame a la Cruz Roja en caso de duda o que no haya mejoría, tenga dificultad para respirar o pierda la consciencia."],["Asegúrese qué, cuándo, y qué cantidad fue lo que tomó. Los servicios de emergencia querrán saber ésta información. Si fue algún tipo de medicamento, guarde la envoltura del mismo, así como la caja.","Llame al centro de información toxicológica. Marque a la Cruz Roja si caen inconscientes, tienen un cambio de carácter, tienen dificultad para respirar o si usted cree que son suicidas. ","No haga que la persona vomite o trate de darle algo de tomar a menos que se lo haya indicado el centro de información toxicológica.  Si usted les provoca el vómito, podría causar un mayor daño a su garganta o bloquear la vía aérea."],
                     ["Busque lo siguiente para determinar si alguien está en estado de choque: Desasosiego o irritabilidad, nausea o vómito, somnolencia, confusión o pérdida de consciencia, piel pálida, fría o húmeda. Pueden llegar a respirar rápidamente y tener una frecuencia cardiaca elevada.","Recuéstelos totalmente. ","Controle cualquier hemorragia externa.","Evite que la persona esté fría o muy caliente.","No les de nada de comer o beber.","Llame a la Cruz Roja o pida que alguien más lo haga."],["Aliente a la persona a sujetar la lesión con sus propias manos o utilice un cojín u objeto para prevenir movimientos innecesarios. Sujetar la lesión puede ayudar a disminuir el dolor y prevenir otros daños.","Si el área lesionada está muy deformada, existe mucho dolor o se necesita transportar, llame a la Cruz Roja o pida que alguien más lo haga.","Asegúrese de que la lesión esté inmovilizada hasta que la ayuda llegue."],
@@ -73,7 +76,7 @@ class InfoEmergencias: UIViewController, UITableViewDelegate, UITableViewDataSou
             numEmergencia = 11}
             
         
-        
+        print(numEmergencia)
     }
     
     override func didReceiveMemoryWarning() {
@@ -86,20 +89,29 @@ class InfoEmergencias: UIViewController, UITableViewDelegate, UITableViewDataSou
         return	1
     }
     func tableView(tableView:	UITableView,	numberOfRowsInSection section:	Int)	->	Int {
-        return self.arrPasos.count
+        return self.arrPasos[numEmergencia].count
     }
     func tableView(tableView:	UITableView,	cellForRowAtIndexPath indexPath:	NSIndexPath)	->	UITableViewCell {
         let celda = tableView.dequeueReusableCellWithIdentifier("celdaID", forIndexPath: indexPath)
-        celda.textLabel!.text =	self.arrEmergencias[indexPath.row]
+        celda.textLabel!.text =	self.arrPasos[numEmergencia][indexPath.row] //self.arrEmergencias[indexPath.row]
+        celda.textLabel?.numberOfLines = 0
+        celda.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        celda.imageView?.image = UIImage(named: "\((indexPath.row )+1).jpg")
+        
+        
         return celda
     }
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = .clearColor()
         cell.textLabel?.textColor = UIColor.grayColor()
-        
+      
         
     }
     
+    @IBAction func back(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
     /*
      // MARK: - Navigation

@@ -412,6 +412,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="plB-0c-7Wy" kind="show" id="cMG-8F-bA4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -453,12 +456,95 @@
                     <tabBarItem key="tabBarItem" title="¿Qué hacer?" image="medical.png" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="table" destination="IK1-lv-T0j" id="FZQ-3i-L47"/>
-                        <segue destination="lBa-je-j9c" kind="presentation" id="c43-s6-DLL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Info Emergencias-->
+        <scene sceneID="Ivt-ab-dGo">
+            <objects>
+                <viewController id="plB-0c-7Wy" customClass="InfoEmergencias" customModule="CRN_Emergencias" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Fg-2t-dz1"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZmF-bI-iWs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qgc-GY-Y1c">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="159" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cHl-sf-l7a">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaID" rowHeight="159" id="bMa-wZ-l9T">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bMa-wZ-l9T" id="xMo-as-jR2">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="158"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qZY-C2-fAh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="8" y="37" width="83" height="84"/>
+                                                    </variation>
+                                                </imageView>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="qZY-C2-fAh"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="qZY-C2-fAh"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="74" width="400" height="526"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="plB-0c-7Wy" id="QZZ-Yj-92w"/>
+                                    <outlet property="delegate" destination="plB-0c-7Wy" id="gzb-Qh-YnC"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0PA-T9-T8g">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Atrás"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="20" width="36" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="back:" destination="plB-0c-7Wy" eventType="touchUpInside" id="P7L-81-bPH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cHl-sf-l7a"/>
+                                <exclude reference="0PA-T9-T8g"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="cHl-sf-l7a"/>
+                                <include reference="0PA-T9-T8g"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="cHl-sf-l7a" id="Tdo-pW-MvR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dLO-QZ-JlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536" y="370"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wbM-AK-JWf">
@@ -488,7 +574,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona la emergencia que deseas reportar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cm6-c5-9hm">
                                         <rect key="frame" x="8" y="18" width="354" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3pr-Zf-aW9">
@@ -711,83 +797,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
-        </scene>
-        <!--¿Qué hacer?-->
-        <scene sceneID="WGB-mW-g6P">
-            <objects>
-                <viewController id="lBa-je-j9c" customClass="SecondViewController" customModule="CRN_Emergencias" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vFj-PL-ZpD"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ijp-b4-qhu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="RFQ-aE-4es">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="zql-Br-lbp">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaID" id="6CO-Nr-yM1">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6CO-Nr-yM1" id="bqq-88-hri">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="551"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="lBa-je-j9c" id="wW3-z0-fbC"/>
-                                    <outlet property="delegate" destination="lBa-je-j9c" id="7WJ-pC-qwE"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="zql-Br-lbp" firstAttribute="top" secondItem="RFQ-aE-4es" secondAttribute="topMargin" id="A3l-Gg-ivA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zql-Br-lbp" secondAttribute="trailing" constant="-20" id="gio-ND-z0U"/>
-                            <constraint firstItem="zql-Br-lbp" firstAttribute="leading" secondItem="RFQ-aE-4es" secondAttribute="leadingMargin" constant="-20" id="gtL-PE-tWC"/>
-                            <constraint firstItem="Ijp-b4-qhu" firstAttribute="top" secondItem="zql-Br-lbp" secondAttribute="bottom" id="lTw-sQ-R3Y"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="zql-Br-lbp"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="lTw-sQ-R3Y"/>
-                                <exclude reference="gio-ND-z0U"/>
-                                <exclude reference="A3l-Gg-ivA"/>
-                                <exclude reference="gtL-PE-tWC"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="zql-Br-lbp"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="lTw-sQ-R3Y"/>
-                                <include reference="gio-ND-z0U"/>
-                                <include reference="A3l-Gg-ivA"/>
-                                <include reference="gtL-PE-tWC"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="¿Qué hacer?" image="medical.png" id="3c5-F1-2jp"/>
-                    <connections>
-                        <outlet property="table" destination="zql-Br-lbp" id="uMG-B8-B7L"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yeS-zZ-zlW" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1455" y="360"/>
         </scene>
     </scenes>
     <resources>
