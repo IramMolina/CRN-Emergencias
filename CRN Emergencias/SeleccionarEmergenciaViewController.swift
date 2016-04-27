@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SeleccionarEmergenciaViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
+class SeleccionarEmergenciaViewController: UIViewController{
 
 
     @IBOutlet weak var descripcionLabel: UILabel!
@@ -29,36 +29,10 @@ class SeleccionarEmergenciaViewController: UIViewController,UIPickerViewDelegate
     
         
     // MARK: - Funciones PeekerView DATASOURCE
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return arregloEmergencias.count
-    }
-        
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return arregloEmergencias[row]
-    }
-    
-    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let attributedString = NSAttributedString(string: arregloEmergencias[row], attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
-        return attributedString
-    }
+ 
     
     // MARK: - Funciones PeekerView DELEGADO
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        emergenciaSeleccionada = arregloEmergencias[row]
-        descripcionLabel.text = arregloDescripciones[row]
-        
-        let preferenciasUsuario = NSUserDefaults.standardUserDefaults()
-        
-        preferenciasUsuario.setObject(emergenciaSeleccionada, forKey: "emergencia")
 
-        preferenciasUsuario.synchronize()
-        
-        print(emergenciaSeleccionada)
-    }
     
     @IBAction func EnviarInformacion(sender: AnyObject) {
         print("FIN")

@@ -11,7 +11,7 @@ import CoreLocation
 
 class FirstViewController: UIViewController, CLLocationManagerDelegate {
 
-    @IBOutlet weak var BotonEmergencia_Outlet: UIButton!
+    @IBOutlet weak var longTapButton: ANLongTapButton!
     
     let administradorDeUbicacion = CLLocationManager()
     
@@ -21,27 +21,17 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
     var servicioUbicacionIniciado: Bool = false
     
-    @IBAction func onPayNowButtonTapped(longTapButton: ANLongTapButton)
-    {
-        
-        if !servicioUbicacionIniciado {
-            self.administradorDeUbicacion.startUpdatingLocation()
-            servicioUbicacionIniciado = true
-        }
-        
-        longTapButton.didTimePeriodElapseBlock = { () -> Void in
-            self.performSegueWithIdentifier("segueSeleccionarEmergencia", sender: self)
-        }
-        
-    }
+
+    
+    
+    
+    
     
  
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Fondo")!)
-        
         
         // Ubicación
         self.administradorDeUbicacion.delegate = self
@@ -49,7 +39,21 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         self.administradorDeUbicacion.requestWhenInUseAuthorization()
         
         
+        if !servicioUbicacionIniciado {
+            self.administradorDeUbicacion.startUpdatingLocation()
+            servicioUbicacionIniciado = true
+        }
         
+        longTapButton.didTimePeriodElapseBlock = { () -> Void in
+        
+            let avisoImportancia = UIAlertController(title: "Aviso", message: "¿Está seguro que desea reporta una emergencia? Le recordamos que esta aplciación no es un juguete.", preferredStyle: .Alert)
+            avisoImportancia.addAction(UIAlertAction(title: "Reportar", style: .Default, handler: { (UIAlertAction) -> Void in
+                self.performSegueWithIdentifier("segueSeleccionarEmergencia", sender: self)
+            }))
+            avisoImportancia.addAction(UIAlertAction(title: "Cancelar", style: .Destructive, handler: nil))
+            
+            self.presentViewController(avisoImportancia, animated: true, completion: nil)
+        }
         
     }
 
