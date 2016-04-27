@@ -11,12 +11,12 @@ import MessageUI
 
 class ObtenerReferenciasViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
+    
     @IBOutlet weak var referenciasTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "BG3.jpg")!)
         // Do any additional setup after loading the view.
     }
 

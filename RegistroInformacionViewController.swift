@@ -20,7 +20,7 @@ class RegistroInformacionViewController: UIViewController{
         
         
         // Do any additional setup after loading the view.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "quitarTeclado")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegistroInformacionViewController.quitarTeclado))
         self.view.addGestureRecognizer(tap)
 
         
