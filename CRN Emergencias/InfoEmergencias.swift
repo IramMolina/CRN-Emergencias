@@ -58,23 +58,50 @@ class InfoEmergencias: UIViewController, UITableViewDelegate, UITableViewDataSou
             numEmergencia = 2}
         else if emergencia == "Convulsiones/ Epilepsia"{
             numEmergencia = 3}
-        else if emergencia == "Quemaduras"{
-            numEmergencia = 4}
         else if emergencia == "Crisis asmática"{
-            numEmergencia = 5}
+            numEmergencia = 4}
         else if emergencia == "Embolia cerebral"{
-            numEmergencia = 6}
+            numEmergencia = 5}
         else if emergencia == "Emergencias diabéticas"{
-            numEmergencia = 7}
+            numEmergencia = 6}
         else if emergencia == "Envenenamiento/ sustancias peligrosas" {
-            numEmergencia = 8}
+            numEmergencia = 7}
         else if emergencia == "Estado de choque" {
-            numEmergencia = 9}
+            numEmergencia = 8}
         else if emergencia == "Fracturas" {
+            numEmergencia = 9}
+        else if emergencia == "Golpe de calor" {
             numEmergencia = 10}
-        else if emergencia == "Golpe de calor " {
+        else if emergencia == "Hipotermia" {
             numEmergencia = 11}
-            
+        else if emergencia == "Inconsciente y respira" {
+            numEmergencia = 12}
+        else if emergencia == "Inconsciente y no respira" {
+            numEmergencia = 13}
+        else if emergencia == "Infarto al corazón" {
+            numEmergencia = 14}
+        else if emergencia == "Lesiones en la cabeza" {
+            numEmergencia = 15}
+        else if emergencia == "Meningitis" {
+            numEmergencia = 16}
+        else if emergencia == "Quemaduras" {
+            numEmergencia = 17}
+        else if emergencia == "Sangrado" {
+            numEmergencia = 18}
+        else if emergencia == "Torceduras y esguinces" {
+            numEmergencia = 19}
+        else if emergencia == "Picaduras y mordeduras de insectos" {
+            numEmergencia = 20}
+        else if emergencia == "Garrapatas" {
+            numEmergencia = 21}
+        else if emergencia == "Picadura/ mordedura de alacranes o arañas" {
+            numEmergencia = 22}
+        else if emergencia == "Picadura de medusa" {
+            numEmergencia = 23}
+        else if emergencia == "Mordedura de serpiente venenosa" {
+            numEmergencia = 24}
+        else if emergencia == "Mordeduras de animales" {
+            numEmergencia = 25}
         
         print(numEmergencia)
     }
@@ -93,7 +120,7 @@ class InfoEmergencias: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     func tableView(tableView:	UITableView,	cellForRowAtIndexPath indexPath:	NSIndexPath)	->	UITableViewCell {
         let celda = tableView.dequeueReusableCellWithIdentifier("celdaID", forIndexPath: indexPath)
-        celda.textLabel!.text =	self.arrPasos[numEmergencia][indexPath.row] //self.arrEmergencias[indexPath.row]
+        celda.textLabel!.text =	self.arrPasos[numEmergencia][indexPath.row]
         celda.textLabel?.numberOfLines = 0
         celda.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
         celda.imageView?.image = UIImage(named: "\((indexPath.row )+1).jpg")
