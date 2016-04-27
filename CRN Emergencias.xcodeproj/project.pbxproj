@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5F0EE4371CB467D4003AD71D /* alarm_base5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F0EE4361CB467D4003AD71D /* alarm_base5.png */; };
 		5F0EE43F1CB46E88003AD71D /* buttonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F0EE43E1CB46E88003AD71D /* buttonBG.png */; };
+		5F4673EB1CD111F0008796A4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4673EA1CD111F0008796A4 /* CoreLocation.framework */; };
+		5F4673ED1CD111F7008796A4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4673EC1CD111F7008796A4 /* MapKit.framework */; };
 		5F4E14911CD030DC00DFAA02 /* MarcoBoton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4E14901CD030DC00DFAA02 /* MarcoBoton.png */; };
 		5F5DAE161C9B486B0038FCD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5DAE151C9B486B0038FCD1 /* AppDelegate.swift */; };
 		5F5DAE181C9B486B0038FCD1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5DAE171C9B486B0038FCD1 /* FirstViewController.swift */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		5F0EE4361CB467D4003AD71D /* alarm_base5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_base5.png; sourceTree = "<group>"; };
 		5F0EE43E1CB46E88003AD71D /* buttonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonBG.png; sourceTree = "<group>"; };
+		5F4673EA1CD111F0008796A4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5F4673EC1CD111F7008796A4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5F4E14901CD030DC00DFAA02 /* MarcoBoton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MarcoBoton.png; sourceTree = "<group>"; };
 		5F5DAE121C9B486B0038FCD1 /* CRN Emergencias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CRN Emergencias.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5DAE151C9B486B0038FCD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F4673ED1CD111F7008796A4 /* MapKit.framework in Frameworks */,
+				5F4673EB1CD111F0008796A4 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +112,8 @@
 		5F5DAE091C9B486B0038FCD1 = {
 			isa = PBXGroup;
 			children = (
+				5F4673EC1CD111F7008796A4 /* MapKit.framework */,
+				5F4673EA1CD111F0008796A4 /* CoreLocation.framework */,
 				5F5DAE141C9B486B0038FCD1 /* CRN Emergencias */,
 				5F5DAE2B1C9B486B0038FCD1 /* CRN EmergenciasTests */,
 				5F5DAE361C9B486B0038FCD1 /* CRN EmergenciasUITests */,
@@ -132,8 +140,8 @@
 				5F5DAE191C9B486B0038FCD1 /* SecondViewController.swift */,
 				5F8EFE2F1CB48697003B4F76 /* RegistroInformacionViewController.swift */,
 				5F8EFE331CB4A53D003B4F76 /* SeleccionarEmergenciaViewController.swift */,
-				5F5DAE1B1C9B486B0038FCD1 /* Main.storyboard */,
 				5F8EFE351CB4AACF003B4F76 /* ObtenerReferenciasViewController.swift */,
+				5F5DAE1B1C9B486B0038FCD1 /* Main.storyboard */,
 				5F5DAE1E1C9B486B0038FCD1 /* Assets.xcassets */,
 				5FF5873D1CB4512200C8248B /* ANLongTapButton.swift */,
 				5FF5873E1CB4512200C8248B /* NSTimer+Closure.swift */,
@@ -245,7 +253,7 @@
 				TargetAttributes = {
 					5F5DAE111C9B486B0038FCD1 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = C2U3LE7375;
+						DevelopmentTeam = LPY3WE22LZ;
 					};
 					5F5DAE271C9B486B0038FCD1 = {
 						CreatedOnToolsVersion = 7.2;
@@ -472,7 +480,7 @@
 				INFOPLIST_FILE = "CRN Emergencias/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "dreamTeam.itesm.CRN-Emergencias";
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.CRN-Emergencias";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CRN Emergencias/CRN Emergencias-Bridging-Header.h";
@@ -490,7 +498,7 @@
 				INFOPLIST_FILE = "CRN Emergencias/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "dreamTeam.itesm.CRN-Emergencias";
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.CRN-Emergencias";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CRN Emergencias/CRN Emergencias-Bridging-Header.h";

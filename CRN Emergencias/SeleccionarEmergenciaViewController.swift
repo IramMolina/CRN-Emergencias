@@ -10,12 +10,14 @@ import UIKit
 
 class SeleccionarEmergenciaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate{
 
+    // MARK: - Outlets
     @IBOutlet weak var otroTextField: UITextField!
+    @IBOutlet weak var emergenciasTableView: UITableView!
 
-    
+    // MARK: - Variables
     let arregloEmergencias = ["Alergias/Anafilaxia","Crisis asmática","Sangrado","Fracturas","Quemaduras","Atragantamiento/Asfixia","Emergencias Diabeticas", "Ataque de ansiedad","Lesiones en la cabeza","Infarto al corazón","Golpe de calor", "Hipotermia","Meningitis", "Envenenamiento/Sustancias peligrosas","Convulsiones/Epilepsia","Picadura/Mordedura","Torceduras/Esguince","Embolia cerebral","Inconsciente","Otro"]
-    let arregloDescripciones = ["Lesión en los tejidos del cuerpo\ncausado por calor, sustancias químicas, electricidad, \netc ...","Descripción","Descripción","Descripción","Descripción","Descripción","Descripción","Descripción","Descripción","Descripción","Descripción","Descripción"]
-    var emergenciaSeleccionada: String = "Null"
+
+    var emergenciaSeleccionada: String = "Default"
     
     // MARK: - Inicio de la Pantalla
     override func viewDidLoad() {
@@ -25,12 +27,32 @@ class SeleccionarEmergenciaViewController: UIViewController, UITableViewDelegate
         
         // Permite quitar el teclado cuando se quita en algun lugar
         
-       
+       // Valor temporal para la emergencia seleccionada
         let preferenciasUsuario = NSUserDefaults.standardUserDefaults()
-        preferenciasUsuario.setObject("default", forKey: "emergencia")
+        preferenciasUsuario.setObject(arregloEmergencias[0], forKey: "emergencia")
         preferenciasUsuario.synchronize()
         
+        // Seleccionar el primer elemento
+        emergenciasTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: false, scrollPosition: .Top)
+        
+        // Desahbilitar el textField que contiene la emergencia seleccionada
+        otroTextField.text = arregloEmergencias[0]
         otroTextField.enabled = false
+    }
+    
+    // MARK: - Funciones de Interfaz
+    // Cancelar el reporte
+    @IBAction func cancelarReporte(sender: AnyObject) {
+        
+        let alertaSalida = UIAlertController(title: "Salir", message: "¿Desea cancelar el reporte de emergencia?", preferredStyle: .Alert)
+        
+        alertaSalida.addAction(UIAlertAction(title: "Permanecer", style: .Default, handler: nil))
+        alertaSalida.addAction(UIAlertAction(title: "Salir", style: .Destructive, handler: { (UIAlertAction) in
+            self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+        }))
+        
+        self.presentViewController(alertaSalida, animated: true, completion: nil)
+        
     }
     
     // MARK: - Funciones Auxiliares
@@ -70,6 +92,8 @@ class SeleccionarEmergenciaViewController: UIViewController, UITableViewDelegate
             otroTextField.enabled = false
             otroTextField.text = arregloEmergencias[indexPath.row]
         }
+        
+        emergenciaSeleccionada = arregloEmergencias[indexPath.row]
     }
     
 
@@ -85,6 +109,14 @@ class SeleccionarEmergenciaViewController: UIViewController, UITableViewDelegate
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+ 
+        if emergenciaSeleccionada == "Otro"{
+            emergenciaSeleccionada = otroTextField.text!
+        }
+        
+        let preferenciasUsuario = NSUserDefaults.standardUserDefaults()
+        preferenciasUsuario.setObject(emergenciaSeleccionada, forKey: "emergencia")
+        preferenciasUsuario.synchronize()
     }
  
 

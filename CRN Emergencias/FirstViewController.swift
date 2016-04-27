@@ -9,40 +9,16 @@
 import UIKit
 import CoreLocation
 
-class FirstViewController: UIViewController, CLLocationManagerDelegate {
+class FirstViewController: UIViewController {
 
     @IBOutlet weak var longTapButton: ANLongTapButton!
-    
-    let administradorDeUbicacion = CLLocationManager()
-    
-    // MARK: - Variables de Ubicación
-    var latitudUsuario: Double = 0.0
-    var longitudUsuario: Double = 0.0
-    
-    var servicioUbicacionIniciado: Bool = false
-    
 
-    
-    
-    
-    
     
  
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        
-        // Ubicación
-        self.administradorDeUbicacion.delegate = self
-        self.administradorDeUbicacion.desiredAccuracy = kCLLocationAccuracyBest
-        self.administradorDeUbicacion.requestWhenInUseAuthorization()
-        
-        
-        if !servicioUbicacionIniciado {
-            self.administradorDeUbicacion.startUpdatingLocation()
-            servicioUbicacionIniciado = true
-        }
         
         longTapButton.didTimePeriodElapseBlock = { () -> Void in
         
@@ -74,32 +50,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     // MARK: - Auxiliares
     
 
-    
-    // MARK: - Métodos de Ubicación
-    
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let ubicacion = locations.last
-        
-        let coordenadas = CLLocationCoordinate2D(latitude: ubicacion!.coordinate.latitude, longitude: ubicacion!.coordinate.longitude)
-        
-    
-        
-        let preferenciasUsuario = NSUserDefaults.standardUserDefaults()
-        
-        preferenciasUsuario.setObject(coordenadas.latitude, forKey: "latitud")
-        preferenciasUsuario.setObject(coordenadas.longitude, forKey: "longitud")
-        
-        preferenciasUsuario.synchronize()
-        
 
-        
-        self.administradorDeUbicacion.stopUpdatingLocation()
-        
-    }
-
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        print(error.localizedDescription)
-    }
 
 }
 

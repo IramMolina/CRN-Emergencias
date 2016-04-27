@@ -18,6 +18,12 @@ class RegistroInformacionViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let preferenciasUsuario = NSUserDefaults.standardUserDefaults()
+        
+        if let temp = preferenciasUsuario.stringForKey("nombre") {
+            print("\(temp)")
+            self.performSegueWithIdentifier("inicio", sender: self)
+        }
         
         // Do any additional setup after loading the view.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegistroInformacionViewController.quitarTeclado))
@@ -30,6 +36,11 @@ class RegistroInformacionViewController: UIViewController{
         self.view.endEditing(true)
     }
 
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

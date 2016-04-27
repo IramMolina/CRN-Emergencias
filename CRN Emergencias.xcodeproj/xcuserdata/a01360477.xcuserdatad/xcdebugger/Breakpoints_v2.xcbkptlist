@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RegistroInformacionViewController.swift"
-            timestampString = "483405272.864173"
+            timestampString = "483473275.363214"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CRN Emergencias/SeleccionarEmergenciaViewController.swift"
-            timestampString = "483415830.716636"
+            timestampString = "483467315.726103"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "SeleccionarEmergenciaViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -105,11 +105,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CRN Emergencias/ObtenerReferenciasViewController.swift"
-            timestampString = "481603224.331847"
+            timestampString = "483472695.419902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "EmularEnvio(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -121,11 +121,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CRN Emergencias/ObtenerReferenciasViewController.swift"
-            timestampString = "481603218.152778"
+            timestampString = "483472695.419902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "EmularEnvio(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -153,11 +153,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RegistroInformacionViewController.swift"
-            timestampString = "483405272.864173"
+            timestampString = "483473275.363214"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "botonEmpezar(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -169,11 +169,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CRN Emergencias/SeleccionarEmergenciaViewController.swift"
-            timestampString = "483415999.701511"
+            timestampString = "483471378.588159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -185,12 +185,89 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RegistroInformacionViewController.swift"
-            timestampString = "483415671.360164"
+            timestampString = "483473275.363214"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CRN Emergencias/ObtenerReferenciasViewController.swift"
+            timestampString = "483465443.161902"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CRN_Emergencias.ObtenerReferenciasViewController.__deallocating_deinit"
+                  moduleName = "CRN Emergencias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a01360477/Documents/CRN-Emergencias/CRN%20Emergencias/ObtenerReferenciasViewController.swift"
+                  timestampString = "483463812.886091"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CRN_Emergencias.ObtenerReferenciasViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; CRN_Emergencias.ObtenerReferenciasViewController"
+                  moduleName = "CRN Emergencias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a01360477/Documents/CRN-Emergencias/CRN%20Emergencias/ObtenerReferenciasViewController.swift"
+                  timestampString = "483463812.886275"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CRN_Emergencias.ObtenerReferenciasViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CRN_Emergencias.ObtenerReferenciasViewController&gt;"
+                  moduleName = "CRN Emergencias"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a01360477/Documents/CRN-Emergencias/CRN%20Emergencias/ObtenerReferenciasViewController.swift"
+                  timestampString = "483463812.886378"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CRN Emergencias/ObtenerReferenciasViewController.swift"
+            timestampString = "483474289.516044"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "locationManager(_:didChangeAuthorizationStatus:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
