@@ -23,6 +23,8 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
     private var textViewEditando = false
     private var referenciaDada = false
     private var referenciaString: String = ""
+    private var posicion: CLLocation?
+    private var naucalpan: Bool = false
     
     // MARK: - Config Inicial
     override func viewDidLoad() {
@@ -92,6 +94,7 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
     // Actualizar Ubicación
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last!.coordinate
+        posicion = locations.last!
         
         mapaMapKitView.setCenterCoordinate(location, animated: false)
         mapaMapKitView.setRegion(MKCoordinateRegion(center: location,span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta:  0.01)), animated: false)
@@ -117,7 +120,7 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
     // MARK: - Funciones MapKit DELEGADO
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-       print("Exito")
+       //print("Exito")
     }
     
     
@@ -166,8 +169,36 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
     
     // MARK: - Funciones Enviar
     
+    func checarNaucalapan(){
+        let geocoder = CLGeocoder()
+        
+        //println("-> Finding user address...")
+        
+        geocoder.reverseGeocodeLocation(posicion!, completionHandler: {(placemarks, error)->Void in
+            var placemark:CLPlacemark!
+            
+            if error == nil && placemarks!.count > 0 {
+                placemark = placemarks![0] as CLPlacemark
+                
+                let municipio = placemark.locality!
+                let minimuni = municipio.lowercaseString
+                
+                if minimuni.rangeOfString("naucalpan") == nil {
+                    self.showNaucalapanErrorAlert()
+                    self.naucalpan = false
+                }
+                else{
+                    self.naucalpan = true
+                }
+            }
+        })
+
+    }
+    
     
     @IBAction func EmularEnvio(sender: AnyObject) {
+        
+        checarNaucalapan()
         
         let preferenciasUsuario = NSUserDefaults.standardUserDefaults()
         
@@ -186,7 +217,9 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
         if MFMailComposeViewController.canSendMail() {
             self.presentViewController(mailComposeViewController, animated: true, completion: nil)
         } else {
-            self.showSendMailErrorAlert()
+            if(naucalpan == true){
+                self.showSendMailErrorAlert()
+            }
         }
         /*
         let alerta = UIAlertController(title: "Confirmar envío", message:
@@ -219,7 +252,7 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
             let tarea = sesion.uploadTaskWithRequest(request, fromData: datosBin, completionHandler: { (datos, response, error) in
                 //Success
                 let cadena = NSString(data: datos!, encoding: NSUTF8StringEncoding)
-                print(cadena)
+                //print(cadena)
             })
             tarea.resume()
             
@@ -258,12 +291,35 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
     }
     
     func showSendMailErrorAlert() {
-        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
-        sendMailErrorAlert.show()
+        
+        let sendMailErrorAlert = UIAlertView(title: "No se pudo enviar el mail", message: "Tu dispositivo no pudo enviar el e-mail.  Por favor revisa la configuración de mail e intenta de nuevo.", delegate: self, cancelButtonTitle: "OK")
+            sendMailErrorAlert.show()
     }
     
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         controller.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func showNaucalapanErrorAlert() {
+        /*let naucalpanErrorAlert = UIAlertView(title: "Te encuentras fuera del municipio de Naucalpan", message: "Esta aplicación solo funciona completamente si te encuentras en Naucalpan. No se puede continuar de otra manera. \n\n Te recomendamos marcar al 555555 y rezar. It's ogre.", delegate: self, cancelButtonTitle: "OK")
+        
+        naucalpanErrorAlert.show()*/
+        
+        let alert = UIAlertController(title: "Te encuentras fuera del municipio de Naucalpan", message: "Esta aplicación solo funciona completamente si te encuentras en Naucalpan. No se puede continuar de otra manera. \n\n Te recomendamos marcar al 555555 y rezar. It's ogre.", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+            switch action.style{
+            case .Default:
+                self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+                
+            case .Cancel:
+                print("cancel")
+                
+            case .Destructive:
+                print("destructive")
+            }
+        }))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 
     /*
