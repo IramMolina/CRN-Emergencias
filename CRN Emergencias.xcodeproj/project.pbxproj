@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		482462931CD160B8000B0F47 /* Reach_ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482462921CD160B8000B0F47 /* Reach_ability.swift */; };
+		48324AA91CD16C9B00C93E7A /* MarcoBoton2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48324AA81CD16C9B00C93E7A /* MarcoBoton2.jpg */; };
 		5F0EE4371CB467D4003AD71D /* alarm_base5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F0EE4361CB467D4003AD71D /* alarm_base5.png */; };
 		5F0EE43F1CB46E88003AD71D /* buttonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F0EE43E1CB46E88003AD71D /* buttonBG.png */; };
 		5F4673EB1CD111F0008796A4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4673EA1CD111F0008796A4 /* CoreLocation.framework */; };
 		5F4673ED1CD111F7008796A4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4673EC1CD111F7008796A4 /* MapKit.framework */; };
-		5F4E14911CD030DC00DFAA02 /* MarcoBoton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4E14901CD030DC00DFAA02 /* MarcoBoton.png */; };
 		5F5DAE161C9B486B0038FCD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5DAE151C9B486B0038FCD1 /* AppDelegate.swift */; };
 		5F5DAE181C9B486B0038FCD1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5DAE171C9B486B0038FCD1 /* FirstViewController.swift */; };
 		5F5DAE1A1C9B486B0038FCD1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5DAE191C9B486B0038FCD1 /* SecondViewController.swift */; };
@@ -50,11 +51,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		482462921CD160B8000B0F47 /* Reach_ability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach_ability.swift; sourceTree = "<group>"; };
+		48324AA81CD16C9B00C93E7A /* MarcoBoton2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarcoBoton2.jpg; sourceTree = "<group>"; };
 		5F0EE4361CB467D4003AD71D /* alarm_base5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_base5.png; sourceTree = "<group>"; };
 		5F0EE43E1CB46E88003AD71D /* buttonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonBG.png; sourceTree = "<group>"; };
 		5F4673EA1CD111F0008796A4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5F4673EC1CD111F7008796A4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		5F4E14901CD030DC00DFAA02 /* MarcoBoton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MarcoBoton.png; sourceTree = "<group>"; };
 		5F5DAE121C9B486B0038FCD1 /* CRN Emergencias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CRN Emergencias.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5DAE151C9B486B0038FCD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F5DAE171C9B486B0038FCD1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				5F5DAE201C9B486B0038FCD1 /* LaunchScreen.storyboard */,
 				5F5DAE231C9B486B0038FCD1 /* Info.plist */,
 				5F8EFE2B1CB4866A003B4F76 /* CRN Emergencias-Bridging-Header.h */,
+				482462921CD160B8000B0F47 /* Reach_ability.swift */,
 			);
 			path = "CRN Emergencias";
 			sourceTree = "<group>";
@@ -173,11 +176,11 @@
 		5FF587431CB456D100C8248B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				48324AA81CD16C9B00C93E7A /* MarcoBoton2.jpg */,
 				5F805CC31CCFD76E00EE1780 /* LogoCRN.png */,
 				6F4E68251CB49442007D7986 /* medical.png */,
 				6F4E68261CB49442007D7986 /* technology.png */,
 				5F0EE4361CB467D4003AD71D /* alarm_base5.png */,
-				5F4E14901CD030DC00DFAA02 /* MarcoBoton.png */,
 				5FB85C721CB474B5001BBDA5 /* lineText4.png */,
 				5F0EE43E1CB46E88003AD71D /* buttonBG.png */,
 				5FB85C741CB47558001BBDA5 /* lineText6.png */,
@@ -253,7 +256,7 @@
 				TargetAttributes = {
 					5F5DAE111C9B486B0038FCD1 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = LPY3WE22LZ;
+						DevelopmentTeam = XQA93MJMUQ;
 					};
 					5F5DAE271C9B486B0038FCD1 = {
 						CreatedOnToolsVersion = 7.2;
@@ -292,13 +295,13 @@
 			files = (
 				6F4E68271CB49442007D7986 /* medical.png in Resources */,
 				5F0EE43F1CB46E88003AD71D /* buttonBG.png in Resources */,
-				5F4E14911CD030DC00DFAA02 /* MarcoBoton.png in Resources */,
 				5F805CC41CCFD76E00EE1780 /* LogoCRN.png in Resources */,
 				5F5DAE221C9B486B0038FCD1 /* LaunchScreen.storyboard in Resources */,
 				5F5DAE1F1C9B486B0038FCD1 /* Assets.xcassets in Resources */,
 				6F4E68281CB49442007D7986 /* technology.png in Resources */,
 				5FB85C731CB474B5001BBDA5 /* lineText4.png in Resources */,
 				5F0EE4371CB467D4003AD71D /* alarm_base5.png in Resources */,
+				48324AA91CD16C9B00C93E7A /* MarcoBoton2.jpg in Resources */,
 				5FB85C751CB47558001BBDA5 /* lineText6.png in Resources */,
 				5F5DAE1D1C9B486B0038FCD1 /* Main.storyboard in Resources */,
 			);
@@ -333,6 +336,7 @@
 				5F5DAE181C9B486B0038FCD1 /* FirstViewController.swift in Sources */,
 				5F8EFE361CB4AACF003B4F76 /* ObtenerReferenciasViewController.swift in Sources */,
 				5F8EFE301CB48697003B4F76 /* RegistroInformacionViewController.swift in Sources */,
+				482462931CD160B8000B0F47 /* Reach_ability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
