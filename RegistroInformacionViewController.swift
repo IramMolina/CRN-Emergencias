@@ -63,7 +63,7 @@ class RegistroInformacionViewController: UIViewController{
         
         preferenciasUsuario.synchronize()
         
-        let avisoImportancia = UIAlertController(title: "Aviso", message: "Al apretar el botón de aceptar, usted garantiza que los datos proprcionados son verídicos y acepta el uso que se le dará a los mismos.", preferredStyle: .Alert)
+        let avisoImportancia = UIAlertController(title: "Aviso", message: "Al presionar \"Aceptar\" usted confirma que está de acuerdo con la política de privacidad de datos y asegura que la información proporcionada es verídica", preferredStyle: .Alert)
         avisoImportancia.addAction(UIAlertAction(title: "Aceptar", style: .Default, handler: { (UIAlertAction) -> Void in
             self.performSegueWithIdentifier("inicio", sender: self)
         }))

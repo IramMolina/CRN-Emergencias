@@ -30,13 +30,15 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate{
             
             if(self.internet == true){
                 self.checarNaucalapan()
+                //CAMBIAR ANTES DE SHIPEAR !!!!!!!!!!!!
                 self.naucalpan = true
+                ////ONDFOINDOANDAONDJANDOADNOADNAODNadn
                 
                 if(self.naucalpan == false){
                     self.showNaucalapanErrorAlert()
                 }
                 else{
-                    let avisoImportancia = UIAlertController(title: "Aviso", message: "¿Está seguro que desea reporta una emergencia? Le recordamos que esta aplciación no es un juguete.",     preferredStyle: .Alert)
+                    let avisoImportancia = UIAlertController(title: "Aviso", message: "Se hace de su conocimiento que el envío de notificaciones falsas amerita un reporte ante el Ministerio Público y al enviar esta alerta se hace responsable de la veracidad del informe.",     preferredStyle: .Alert)
                     avisoImportancia.addAction(UIAlertAction(title: "Reportar", style: .Default, handler: { (UIAlertAction) -> Void in
                         self.performSegueWithIdentifier("segueSeleccionarEmergencia", sender: self)
                     }))
@@ -65,7 +67,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate{
 
     @IBAction func BotonLlamar_Accion(sender: UIButton) {
         
-        let phone = "tel://7225857373"
+        let phone = "tel://55606899"
         let url : NSURL = NSURL(string:phone)!
         UIApplication.sharedApplication().openURL(url)
         
