@@ -31,6 +31,13 @@
 		5FF587401CB4512200C8248B /* NSTimer+Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF5873E1CB4512200C8248B /* NSTimer+Closure.swift */; };
 		6F4E68271CB49442007D7986 /* medical.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F4E68251CB49442007D7986 /* medical.png */; };
 		6F4E68281CB49442007D7986 /* technology.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F4E68261CB49442007D7986 /* technology.png */; };
+		6F94B62B1CD04D4A00A2892E /* InfoEmergencias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F94B62A1CD04D4A00A2892E /* InfoEmergencias.swift */; };
+		6FC5CC711CD15E7500D4AD6E /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FC5CC6B1CD15E7500D4AD6E /* 1.jpg */; };
+		6FC5CC721CD15E7500D4AD6E /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FC5CC6C1CD15E7500D4AD6E /* 2.jpg */; };
+		6FC5CC731CD15E7500D4AD6E /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FC5CC6D1CD15E7500D4AD6E /* 3.jpg */; };
+		6FC5CC741CD15E7500D4AD6E /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FC5CC6E1CD15E7500D4AD6E /* 4.jpg */; };
+		6FC5CC751CD15E7500D4AD6E /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FC5CC6F1CD15E7500D4AD6E /* 5.jpg */; };
+		6FC5CC761CD15E7500D4AD6E /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FC5CC701CD15E7500D4AD6E /* 6.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +89,13 @@
 		5FF5873E1CB4512200C8248B /* NSTimer+Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+Closure.swift"; sourceTree = "<group>"; };
 		6F4E68251CB49442007D7986 /* medical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medical.png; sourceTree = "<group>"; };
 		6F4E68261CB49442007D7986 /* technology.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = technology.png; sourceTree = "<group>"; };
+		6F94B62A1CD04D4A00A2892E /* InfoEmergencias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoEmergencias.swift; sourceTree = "<group>"; };
+		6FC5CC6B1CD15E7500D4AD6E /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		6FC5CC6C1CD15E7500D4AD6E /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		6FC5CC6D1CD15E7500D4AD6E /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		6FC5CC6E1CD15E7500D4AD6E /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		6FC5CC6F1CD15E7500D4AD6E /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		6FC5CC701CD15E7500D4AD6E /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +198,12 @@
 				5FB85C721CB474B5001BBDA5 /* lineText4.png */,
 				5F0EE43E1CB46E88003AD71D /* buttonBG.png */,
 				5FB85C741CB47558001BBDA5 /* lineText6.png */,
+				6FC5CC6B1CD15E7500D4AD6E /* 1.jpg */,
+				6FC5CC6C1CD15E7500D4AD6E /* 2.jpg */,
+				6FC5CC6D1CD15E7500D4AD6E /* 3.jpg */,
+				6FC5CC6E1CD15E7500D4AD6E /* 4.jpg */,
+				6FC5CC6F1CD15E7500D4AD6E /* 5.jpg */,
+				6FC5CC701CD15E7500D4AD6E /* 6.jpg */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -297,8 +317,11 @@
 				5F0EE43F1CB46E88003AD71D /* buttonBG.png in Resources */,
 				5F805CC41CCFD76E00EE1780 /* LogoCRN.png in Resources */,
 				5F5DAE221C9B486B0038FCD1 /* LaunchScreen.storyboard in Resources */,
+				6FC5CC731CD15E7500D4AD6E /* 3.jpg in Resources */,
 				5F5DAE1F1C9B486B0038FCD1 /* Assets.xcassets in Resources */,
 				6F4E68281CB49442007D7986 /* technology.png in Resources */,
+				6FC5CC761CD15E7500D4AD6E /* 6.jpg in Resources */,
+				6FC5CC751CD15E7500D4AD6E /* 5.jpg in Resources */,
 				5FB85C731CB474B5001BBDA5 /* lineText4.png in Resources */,
 				5F0EE4371CB467D4003AD71D /* alarm_base5.png in Resources */,
 				48324AA91CD16C9B00C93E7A /* MarcoBoton2.jpg in Resources */,
@@ -329,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FF5873F1CB4512200C8248B /* ANLongTapButton.swift in Sources */,
+				6F94B62B1CD04D4A00A2892E /* InfoEmergencias.swift in Sources */,
 				5F5DAE1A1C9B486B0038FCD1 /* SecondViewController.swift in Sources */,
 				5FF587401CB4512200C8248B /* NSTimer+Closure.swift in Sources */,
 				5F8EFE341CB4A53D003B4F76 /* SeleccionarEmergenciaViewController.swift in Sources */,

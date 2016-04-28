@@ -13,7 +13,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var table: UITableView!
   
     
-    let arrEmergencias = ["Alergias/Anafilaxia","Crisis asmática","Sangrado","Fracturas","Quemaduras","Atragantamiento/Asfixia","Emergencias Diabeticas", "Ataque de ansiedad","Lesiones en la cabeza","Infarto al corazón","Golpe de calor", "Hipotermia","Meningitis", "Envenenamiento/Sustancias peligrosas","Convulsiones/Epilepsia","Picadura/Mordedura","Torceduras/Esguince","Embolia cerebral","Inconsciente"];
+    let arrEmergencias = ["Alergias/ Anafilaxia","Ataque de ansiedad","Atragantamiento/Asfixia","Convulsiones/ Epilepsia","Quemaduras","Crisis asmática","Embolia cerebral", "Emergencias diabéticas","Envenenamiento/ sustancias peligrosas","Estado de choque","Fracturas", "Golpe de calor","Hipotermia", "Inconsciente y respira","Inconsciente y no respira","Infarto al corazón","Lesiones en la cabeza","Meningitis","Quemaduras","Sangrado","Torceduras y esguinces","Picaduras y mordeduras de insectos","Garrapatas","Picadura/ mordedura de alacranes o arañas","Picadura de medusa","Mordedura de serpiente venenosa","Mordeduras de animales"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +40,20 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = .clearColor()
-        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.textLabel?.textColor = UIColor.grayColor()
+        
+        
     }
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let info = segue.destinationViewController as! InfoEmergencias
+        info.emergencia = arrEmergencias[table.indexPathForSelectedRow!.row]
+        
+        //let indexPath = NSIndexPath(forRow: sender.tag, inSection: 0)
+        print(arrEmergencias[table.indexPathForSelectedRow!.row])
+        segue.destinationViewController.title = arrEmergencias[table.indexPathForSelectedRow!.row]
+        
+    }
     
 
 }

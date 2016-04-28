@@ -415,6 +415,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="plB-0c-7Wy" kind="show" id="cMG-8F-bA4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
