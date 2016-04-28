@@ -156,8 +156,9 @@
 				5F5DAE191C9B486B0038FCD1 /* SecondViewController.swift */,
 				5F8EFE2F1CB48697003B4F76 /* RegistroInformacionViewController.swift */,
 				5F8EFE331CB4A53D003B4F76 /* SeleccionarEmergenciaViewController.swift */,
-				5F8EFE351CB4AACF003B4F76 /* ObtenerReferenciasViewController.swift */,
 				5F5DAE1B1C9B486B0038FCD1 /* Main.storyboard */,
+				5F8EFE351CB4AACF003B4F76 /* ObtenerReferenciasViewController.swift */,
+				6F94B62A1CD04D4A00A2892E /* InfoEmergencias.swift */,
 				5F5DAE1E1C9B486B0038FCD1 /* Assets.xcassets */,
 				5FF5873D1CB4512200C8248B /* ANLongTapButton.swift */,
 				5FF5873E1CB4512200C8248B /* NSTimer+Closure.swift */,
@@ -276,7 +277,7 @@
 				TargetAttributes = {
 					5F5DAE111C9B486B0038FCD1 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = XQA93MJMUQ;
+						DevelopmentTeam = C2U3LE7375;
 					};
 					5F5DAE271C9B486B0038FCD1 = {
 						CreatedOnToolsVersion = 7.2;
@@ -315,6 +316,7 @@
 			files = (
 				6F4E68271CB49442007D7986 /* medical.png in Resources */,
 				5F0EE43F1CB46E88003AD71D /* buttonBG.png in Resources */,
+				6FC5CC741CD15E7500D4AD6E /* 4.jpg in Resources */,
 				5F805CC41CCFD76E00EE1780 /* LogoCRN.png in Resources */,
 				5F5DAE221C9B486B0038FCD1 /* LaunchScreen.storyboard in Resources */,
 				6FC5CC731CD15E7500D4AD6E /* 3.jpg in Resources */,
@@ -325,6 +327,8 @@
 				5FB85C731CB474B5001BBDA5 /* lineText4.png in Resources */,
 				5F0EE4371CB467D4003AD71D /* alarm_base5.png in Resources */,
 				48324AA91CD16C9B00C93E7A /* MarcoBoton2.jpg in Resources */,
+				6FC5CC721CD15E7500D4AD6E /* 2.jpg in Resources */,
+				6FC5CC711CD15E7500D4AD6E /* 1.jpg in Resources */,
 				5FB85C751CB47558001BBDA5 /* lineText6.png in Resources */,
 				5F5DAE1D1C9B486B0038FCD1 /* Main.storyboard in Resources */,
 			);
@@ -508,7 +512,7 @@
 				INFOPLIST_FILE = "CRN Emergencias/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.CRN-Emergencias";
+				PRODUCT_BUNDLE_IDENTIFIER = "mxx.itesm.CRN-Emergencias";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CRN Emergencias/CRN Emergencias-Bridging-Header.h";
@@ -526,7 +530,7 @@
 				INFOPLIST_FILE = "CRN Emergencias/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.CRN-Emergencias";
+				PRODUCT_BUNDLE_IDENTIFIER = "mxx.itesm.CRN-Emergencias";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CRN Emergencias/CRN Emergencias-Bridging-Header.h";
