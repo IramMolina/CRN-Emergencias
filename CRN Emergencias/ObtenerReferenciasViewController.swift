@@ -266,10 +266,19 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
         
         let sendMailErrorAlert = UIAlertView(title: "No se pudo enviar el mail", message: "Tu dispositivo no pudo enviar el e-mail.  Por favor revisa la configuración de mail e intenta de nuevo.", delegate: self, cancelButtonTitle: "OK")
             sendMailErrorAlert.show()
+        
+        //CUando falla  segue()
+        self.performSegueWithIdentifier("push", sender: self)
     }
     
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
+        //controller.dismissViewControllerAnimated(true, completion:)
+        self.navigationController?.dismissViewControllerAnimated(true, completion: { 
+            self.performSegueWithIdentifier("push", sender: self)
+            
+        })
+        //cuando se envia segue()
+        //self.performSegueWithIdentifier("push", sender: self)
     }
     
     /*
@@ -281,5 +290,23 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "push"){
+        let info = segue.destinationViewController as! InfoEmergencias
+        
+        
+        let preferenciasUsuario = NSUserDefaults.standardUserDefaults()
+        let emergencia = preferenciasUsuario.stringForKey("emergencia")!
+        
+        
+        
+        info.emergencia = emergencia
+        
+        //let indexPath = NSIndexPath(forRow: sender.tag, inSection: 0)
+        segue.destinationViewController.title = emergencia
+        }
+        
+    }
 
 }

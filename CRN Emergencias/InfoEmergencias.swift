@@ -43,6 +43,7 @@ class InfoEmergencias: UIViewController, UITableViewDelegate, UITableViewDataSou
         super.viewDidLoad()
         
         checarNum()
+        self.navigationItem.setHidesBackButton(true, animated:true);
     }
     
     //func webViewDidFinishLoad(webView: UIWebView) {
@@ -123,6 +124,7 @@ class InfoEmergencias: UIViewController, UITableViewDelegate, UITableViewDataSou
         celda.textLabel!.text =	self.arrPasos[numEmergencia][indexPath.row]
         celda.textLabel?.numberOfLines = 0
         celda.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        celda.textLabel?.font = UIFont.systemFontOfSize(11.0)
         celda.imageView?.image = UIImage(named: "\((indexPath.row )+1).jpg")
         
         

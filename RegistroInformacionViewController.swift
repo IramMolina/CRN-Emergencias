@@ -14,9 +14,14 @@ class RegistroInformacionViewController: UIViewController{
     @IBOutlet weak var apellidoTextField: UITextField!
     @IBOutlet weak var telefonoTextField: UITextField!
     
+    //@IBOutlet weak var politicaTXT: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //politicaTXT.adjustsFontSizeToFitWidth = true
+        
         
         let preferenciasUsuario = NSUserDefaults.standardUserDefaults()
         
