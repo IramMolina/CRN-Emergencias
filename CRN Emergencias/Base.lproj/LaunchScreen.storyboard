@@ -25,10 +25,6 @@
                                     <constraint firstAttribute="width" constant="240" id="x0v-0F-Zn6"/>
                                 </constraints>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MAK-ut-pzn">
-                                <rect key="frame" x="282" y="489" width="37" height="37"/>
-                                <color key="color" white="0.64017932050000004" alpha="0.70091594830000004" colorSpace="calibratedWhite"/>
-                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emergencias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNH-Is-IaH">
                                 <rect key="frame" x="195" y="52" width="210" height="42"/>
                                 <constraints>
@@ -42,9 +38,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="MAK-ut-pzn" secondAttribute="bottom" constant="74" id="24L-4j-z85"/>
                             <constraint firstItem="pNH-Is-IaH" firstAttribute="centerX" secondItem="zZq-X6-HE1" secondAttribute="centerX" id="Bp4-Dw-dVX"/>
-                            <constraint firstItem="MAK-ut-pzn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="LjV-dh-Hpq"/>
                             <constraint firstItem="pNH-Is-IaH" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="32" id="NAI-kz-1iK"/>
                             <constraint firstItem="zZq-X6-HE1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="aMa-R0-SXh"/>
                             <constraint firstItem="zZq-X6-HE1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="suM-hr-7rr"/>

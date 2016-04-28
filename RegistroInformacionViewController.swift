@@ -55,6 +55,15 @@ class RegistroInformacionViewController: UIViewController{
     
     @IBAction func botonEmpezar(sender: AnyObject) {
         
+        if(nombreTextField.text! == "" || apellidoTextField.text! == "" || telefonoTextField.text! == ""){
+            let avisoIncompleto = UIAlertController(title: "Aviso", message: "La información esta incompleta. Llene con la información solicitada", preferredStyle: .Alert)
+            avisoIncompleto.addAction(UIAlertAction(title: "Aceptar", style: .Default, handler: { (UIAlertAction) -> Void in
+            }))
+            
+            self.presentViewController(avisoIncompleto, animated: true, completion: nil)
+        }
+        else{
+        
         let preferenciasUsuario = NSUserDefaults.standardUserDefaults()
         
         preferenciasUsuario.setObject(nombreTextField.text!, forKey: "nombre")
@@ -72,6 +81,7 @@ class RegistroInformacionViewController: UIViewController{
         }))
         
         self.presentViewController(avisoImportancia, animated: true, completion: nil)
+        }
         
         
     }
