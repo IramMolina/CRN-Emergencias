@@ -55,6 +55,15 @@ class RegistroInformacionViewController: UIViewController{
     
     @IBAction func botonEmpezar(sender: AnyObject) {
         
+        if(nombreTextField.text! == "" || apellidoTextField.text! == "" || telefonoTextField.text! == ""){
+            let avisoIncompleto = UIAlertController(title: "Aviso", message: "La información esta incompleta. Llene con la información solicitada", preferredStyle: .Alert)
+            avisoIncompleto.addAction(UIAlertAction(title: "Aceptar", style: .Default, handler: { (UIAlertAction) -> Void in
+            }))
+            
+            self.presentViewController(avisoIncompleto, animated: true, completion: nil)
+        }
+        else{
+        
         let preferenciasUsuario = NSUserDefaults.standardUserDefaults()
         
         preferenciasUsuario.setObject(nombreTextField.text!, forKey: "nombre")
@@ -63,7 +72,7 @@ class RegistroInformacionViewController: UIViewController{
         
         preferenciasUsuario.synchronize()
         
-        let avisoImportancia = UIAlertController(title: "Aviso", message: "Al apretar el botón de aceptar, usted garantiza que los datos proprcionados son verídicos y acepta el uso que se le dará a los mismos.", preferredStyle: .Alert)
+        let avisoImportancia = UIAlertController(title: "Aviso", message: "Al presionar \"Aceptar\" usted confirma que está de acuerdo con la política de privacidad de datos y asegura que la información proporcionada es verídica", preferredStyle: .Alert)
         avisoImportancia.addAction(UIAlertAction(title: "Aceptar", style: .Default, handler: { (UIAlertAction) -> Void in
             self.performSegueWithIdentifier("inicio", sender: self)
         }))
@@ -72,6 +81,7 @@ class RegistroInformacionViewController: UIViewController{
         }))
         
         self.presentViewController(avisoImportancia, animated: true, completion: nil)
+        }
         
         
     }

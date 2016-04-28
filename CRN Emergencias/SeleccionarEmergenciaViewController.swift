@@ -17,7 +17,7 @@ class SeleccionarEmergenciaViewController: UIViewController, UITableViewDelegate
     // MARK: - Variables
     let arregloEmergencias = ["Alergias/Anafilaxia","Crisis asmática","Sangrado","Fracturas","Quemaduras","Atragantamiento/Asfixia","Emergencias Diabeticas", "Ataque de ansiedad","Lesiones en la cabeza","Infarto al corazón","Golpe de calor", "Hipotermia","Meningitis", "Envenenamiento/Sustancias peligrosas","Convulsiones/Epilepsia","Picadura/Mordedura","Torceduras/Esguince","Embolia cerebral","Inconsciente","Otro"]
 
-    var emergenciaSeleccionada: String = "Default"
+    var emergenciaSeleccionada: String = "Alergias/Anafilaxia"
     
     // MARK: - Inicio de la Pantalla
     override func viewDidLoad() {

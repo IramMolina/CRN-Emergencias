@@ -199,15 +199,16 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
         */
         
         
-        //https://docs.google.com/forms/d/1PhVKIBESG5KdAwErQpJCpCSkrcYEvDM-aPmmttJQxZw/formResponse
-        //Nombre entry.865888786
-        //Apellido entry.790203585
-        //Emergencia entry.1100998756
-        //Localizacion entry.794367441
-        //Telefono entry.1874484554
+        //https://docs.google.com/forms/d/1RtS7Vpq-CWJGOLHzE5AY57Hc-MSZ-InCneMSZqRYtsk/formResponse
+        //Nombre entry.972638277
+        //Apellido entry.407116933
+        //Emergencia entry.310819800
+        //Localizacion entry.993735022
+        //Telefono entry.1209442796
+        //Referencias entry.1664264665
         
         //Envio de datos a googly form
-        let direccion = "https://docs.google.com/forms/d/1PhVKIBESG5KdAwErQpJCpCSkrcYEvDM-aPmmttJQxZw/formResponse"
+        let direccion = "https://docs.google.com/forms/d/1RtS7Vpq-CWJGOLHzE5AY57Hc-MSZ-InCneMSZqRYtsk/formResponse"
         
         if let url = NSURL(string: direccion){
             let configuracion = NSURLSessionConfiguration.defaultSessionConfiguration()
@@ -215,7 +216,7 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
             let request = NSMutableURLRequest(URL: url)
             request.HTTPMethod = "POST"
             
-            let cadenaDatos = "entry.865888786=\(nombre)&entry.790203585=\(apellido)&entry.1100998756=\(emergencia)&entry.794367441=\(urlMaps)&entry.1874484554=\(telefono)"
+            let cadenaDatos = "entry.972638277=\(nombre)&entry.407116933=\(apellido)&entry.310819800=\(emergencia)&entry.993735022=\(urlMaps)&entry.1209442796=\(telefono)&entry.1664264665=\(self.referenciasTextView.text)"
             
             let cadenaAcentos = cadenaDatos.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
             let datosBin = cadenaAcentos?.dataUsingEncoding(NSUTF8StringEncoding)
@@ -249,12 +250,13 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
         let longitud = preferenciasUsuario.stringForKey("longitud")!
         let urlMaps = "http://maps.google.com/maps?q=\(latitud),\(longitud)"
         let telefono = preferenciasUsuario.stringForKey("telefono")!
+        let referencia = self.referenciasTextView.text
 
         
-        let mensaje = "Se enviará:\nNombre: \(nombre) \(apellido)\nEmergencia: \(emergencia)\nTelefono: \(telefono)\nCoordenadas: \(urlMaps)"
+        let mensaje = "Se enviará:\nNombre: \(nombre) \(apellido)\nEmergencia: \(emergencia)\nTelefono: \(telefono)\nCoordenadas: \(urlMaps)\nReferencias: \(referencia)"
         
-        mailComposerVC.setToRecipients(["araizaga.yael@gmail.com"])
-        mailComposerVC.setSubject("Prueba de correo")
+        mailComposerVC.setToRecipients(["urgencias.crn.form@gmail.com"])
+        mailComposerVC.setSubject("Se ha activado el boton de emergencia")
         mailComposerVC.setMessageBody(mensaje, isHTML: false)
         
         return mailComposerVC
