@@ -10,6 +10,7 @@
 
 import UIKit
 
+
 private let reuseIdentifier = "Cell"
 
 class InfoEmergencias: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -103,8 +104,14 @@ class InfoEmergencias: UIViewController, UITableViewDelegate, UITableViewDataSou
             numEmergencia = 24}
         else if emergencia == "Mordeduras de animales" {
             numEmergencia = 25}
-        
-        print(numEmergencia)
+        else{
+            print("emergecia diferente")
+            numEmergencia = -1
+            //self.navigationController?.popToViewController(FirstViewController, animated: true)
+            dismissViewControllerAnimated(true, completion: nil)
+        }
+       
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -117,7 +124,11 @@ class InfoEmergencias: UIViewController, UITableViewDelegate, UITableViewDataSou
         return	1
     }
     func tableView(tableView:	UITableView,	numberOfRowsInSection section:	Int)	->	Int {
-        return self.arrPasos[numEmergencia].count
+        if(numEmergencia != -1){
+            return self.arrPasos[numEmergencia].count}
+        else{
+            return 0
+        }
     }
     func tableView(tableView:	UITableView,	cellForRowAtIndexPath indexPath:	NSIndexPath)	->	UITableViewCell {
         let celda = tableView.dequeueReusableCellWithIdentifier("celdaID", forIndexPath: indexPath)
@@ -137,6 +148,7 @@ class InfoEmergencias: UIViewController, UITableViewDelegate, UITableViewDataSou
         
     }
     
+
     @IBAction func back(sender: AnyObject) {
         
         dismissViewControllerAnimated(true, completion: nil)
