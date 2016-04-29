@@ -31,7 +31,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate{
             if(self.internet == true){
                 self.checarNaucalapan()
                 //CAMBIAR ANTES DE SHIPEAR !!!!!!!!!!!!
-                self.naucalpan = true
+               // self.naucalpan = true
                 ////ONDFOINDOANDAONDJANDOADNOADNAODNadn
                 
                 if(self.naucalpan == false){
