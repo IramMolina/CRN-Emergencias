@@ -66,10 +66,18 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate{
     }
 
     @IBAction func BotonLlamar_Accion(sender: UIButton) {
+        self.checarNaucalapan()
+        if(self.naucalpan == false){
+            let phone = "tel://066"
+            let url : NSURL = NSURL(string:phone)!
+            UIApplication.sharedApplication().openURL(url)
+        }
         
-        let phone = "tel://55606899"
-        let url : NSURL = NSURL(string:phone)!
-        UIApplication.sharedApplication().openURL(url)
+        else{
+            let phone = "tel://55606899"
+            let url : NSURL = NSURL(string:phone)!
+            UIApplication.sharedApplication().openURL(url)
+        }
         
         
     }
