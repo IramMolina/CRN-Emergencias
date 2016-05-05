@@ -31,7 +31,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate{
             if(self.internet == true){
                 self.checarNaucalapan()
                 //CAMBIAR ANTES DE SHIPEAR !!!!!!!!!!!!
-                self.naucalpan = true
+                //self.naucalpan = true
                 ////ONDFOINDOANDAONDJANDOADNOADNAODNadn
                 
                 if(self.naucalpan == false){
@@ -67,6 +67,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate{
 
     @IBAction func BotonLlamar_Accion(sender: UIButton) {
         self.checarNaucalapan()
+        //self.naucalpan = true
         if(self.naucalpan == false){
             let phone = "tel://066"
             let url : NSURL = NSURL(string:phone)!
