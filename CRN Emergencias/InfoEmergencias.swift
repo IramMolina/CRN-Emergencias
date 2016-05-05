@@ -64,7 +64,7 @@ class InfoEmergencias: UIViewController, UITableViewDelegate, UITableViewDataSou
             numEmergencia = 4}
         else if emergencia == "Embolia cerebral"{
             numEmergencia = 5}
-        else if emergencia == "Emergencias diabéticas"{
+        else if emergencia == "Emergencias Diabéticas"{
             numEmergencia = 6}
         else if emergencia == "Envenenamiento/sustancias peligrosas" {
             numEmergencia = 7}
@@ -96,7 +96,7 @@ class InfoEmergencias: UIViewController, UITableViewDelegate, UITableViewDataSou
             numEmergencia = 20}
         else if emergencia == "Garrapatas" {
             numEmergencia = 21}
-        else if emergencia == "Picadura/ mordedura de alacranes o arañas" {
+        else if emergencia == "Picadura/mordedura de alacranes o arañas" {
             numEmergencia = 22}
         else if emergencia == "Picadura de medusa" {
             numEmergencia = 23}

@@ -324,7 +324,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hck-8L-ePw">
                                 <rect key="frame" x="20" y="364" width="560" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Porporcione detalles que puedan ayudar al equipo de emergencias a encontrar la ubicación más rápido.
+                                <string key="text">Proporcione detalles que puedan ayudar al equipo de emergencias a encontrar la ubicación más rápido.
 
 Eg. Casas, Edificios, Calles, etc...</string>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>

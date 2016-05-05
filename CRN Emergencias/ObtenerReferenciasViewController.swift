@@ -180,7 +180,11 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
         let longitud = preferenciasUsuario.stringForKey("longitud")!
         let urlMaps = "http://maps.google.com/maps?q=\(latitud),\(longitud)"
         let telefono = preferenciasUsuario.stringForKey("telefono")!
-
+        var referencias = self.referenciasTextView.text!
+        
+        if referencias.rangeOfString("Proporcione") != nil {
+            referencias = "Ninguna"
+        }
         
         let mensaje = "Se enviará:\nNombre: \(nombre) \(apellido)\nEmergencia: \(emergencia)\nCoordenadas: \(latitud) \(longitud)"
         print(mensaje)
@@ -216,7 +220,7 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
             let request = NSMutableURLRequest(URL: url)
             request.HTTPMethod = "POST"
             
-            let cadenaDatos = "entry.972638277=\(nombre)&entry.407116933=\(apellido)&entry.310819800=\(emergencia)&entry.993735022=\(urlMaps)&entry.1209442796=\(telefono)&entry.1664264665=\(self.referenciasTextView.text)"
+            let cadenaDatos = "entry.972638277=\(nombre)&entry.407116933=\(apellido)&entry.310819800=\(emergencia)&entry.993735022=\(urlMaps)&entry.1209442796=\(telefono)&entry.1664264665=\(referencias)"
             
             let cadenaAcentos = cadenaDatos.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
             let datosBin = cadenaAcentos?.dataUsingEncoding(NSUTF8StringEncoding)
@@ -250,7 +254,11 @@ class ObtenerReferenciasViewController: UIViewController, CLLocationManagerDeleg
         let longitud = preferenciasUsuario.stringForKey("longitud")!
         let urlMaps = "http://maps.google.com/maps?q=\(latitud),\(longitud)"
         let telefono = preferenciasUsuario.stringForKey("telefono")!
-        let referencia = self.referenciasTextView.text
+        var referencia = self.referenciasTextView.text
+        
+        if referencia.rangeOfString("Proporcione") != nil {
+            referencia = "Ninguna"
+        }
 
         
         let mensaje = "Se enviará:\nNombre: \(nombre) \(apellido)\nEmergencia: \(emergencia)\nTelefono: \(telefono)\nCoordenadas: \(urlMaps)\nReferencias: \(referencia)"

@@ -13,7 +13,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var table: UITableView!
   
     
-    let arrEmergencias = ["Alergias/ Anafilaxia","Ataque de ansiedad","Atragantamiento/Asfixia","Convulsiones/ Epilepsia","Quemaduras","Crisis asmática","Embolia cerebral", "Emergencias diabéticas","Envenenamiento/ sustancias peligrosas","Estado de choque","Fracturas", "Golpe de calor","Hipotermia", "Inconsciente y respira","Inconsciente y no respira","Infarto al corazón","Lesiones en la cabeza","Meningitis","Quemaduras","Sangrado","Torceduras y esguinces","Picaduras y mordeduras de insectos","Garrapatas","Picadura/ mordedura de alacranes o arañas","Picadura de medusa","Mordedura de serpiente venenosa","Mordeduras de animales"];
+    let arrEmergencias = ["Alergias/Anafilaxia","Ataque de ansiedad","Atragantamiento/Asfixia","Convulsiones/Epilepsia","Quemaduras","Crisis asmática","Embolia cerebral", "Emergencias Diabéticas","Envenenamiento/sustancias peligrosas","Estado de choque","Fracturas", "Golpe de calor","Hipotermia", "Inconsciente y respira","Inconsciente y no respira","Infarto al corazón","Lesiones en la cabeza","Meningitis","Quemaduras","Sangrado","Torceduras y esguinces","Picaduras y mordeduras de insectos","Garrapatas","Picadura/mordedura de alacranes o arañas","Picadura de medusa","Mordedura de serpiente venenosa","Mordeduras de animales"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
