@@ -15,7 +15,7 @@ class SeleccionarEmergenciaViewController: UIViewController, UITableViewDelegate
     @IBOutlet weak var emergenciasTableView: UITableView!
 
     // MARK: - Variables
-    let arregloEmergencias = ["Alergias/Anafilaxia","Crisis asmática","Sangrado","Fracturas","Quemaduras","Atragantamiento/Asfixia","Emergencias Diabéticas", "Ataque de ansiedad","Lesiones en la cabeza","Infarto al corazón","Golpe de calor", "Hipotermia","Meningitis", "Envenenamiento/sustancias peligrosas","Convulsiones/Epilepsia","Picadura/Mordedura","Torceduras/Esguince","Embolia cerebral","Inconsciente","Otro"]
+    let arregloEmergencias = ["Alergias/Anafilaxia","Ataque de ansiedad","Atragantamiento/Asfixia","Convulsiones/Epilepsia","Quemaduras","Crisis asmática","Embolia cerebral", "Emergencias Diabéticas","Envenenamiento/sustancias peligrosas","Estado de choque","Fracturas", "Golpe de calor","Hipotermia", "Inconsciente y respira","Inconsciente y no respira","Infarto al corazón","Lesiones en la cabeza","Meningitis","Quemaduras","Sangrado","Torceduras y esguinces","Picaduras y mordeduras de insectos","Garrapatas","Picadura/mordedura de alacranes o arañas","Picadura de medusa","Mordedura de serpiente venenosa","Mordeduras de animales","Otro"];
 
     var emergenciaSeleccionada: String = "Alergias/Anafilaxia"
     
