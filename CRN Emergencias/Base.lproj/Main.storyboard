@@ -523,43 +523,57 @@ Eg. Casas, Edificios, Calles, etc...</string>
                                 <variation key="widthClass=compact" constant="8"/>
                             </constraint>
                             <constraint firstItem="2nC-py-bOy" firstAttribute="leading" secondItem="vO0-sJ-74b" secondAttribute="leadingMargin" constant="8" id="7K8-sd-4gn">
-                                <variation key="widthClass=compact" constant="11"/>
+                                <variation key="widthClass=compact" constant="15"/>
                             </constraint>
                             <constraint firstItem="GWP-cl-e1s" firstAttribute="leading" secondItem="vO0-sJ-74b" secondAttribute="leadingMargin" constant="6" id="CCL-P9-ePO">
-                                <variation key="widthClass=compact" constant="8"/>
+                                <variation key="widthClass=compact" constant="12"/>
                             </constraint>
                             <constraint firstItem="kBG-rm-zbP" firstAttribute="top" secondItem="GWP-cl-e1s" secondAttribute="bottom" constant="-3" id="CHF-08-UUH">
                                 <variation key="widthClass=compact" constant="8"/>
                             </constraint>
                             <constraint firstItem="Q0E-ag-p00" firstAttribute="leading" secondItem="vO0-sJ-74b" secondAttribute="leadingMargin" constant="8" id="DnP-GD-TOu">
-                                <variation key="widthClass=compact" constant="10"/>
+                                <variation key="widthClass=compact" constant="14"/>
                             </constraint>
                             <constraint firstItem="1lz-Xb-byT" firstAttribute="top" secondItem="J2U-ag-x2B" secondAttribute="bottom" constant="16" id="GcT-G3-fby">
                                 <variation key="widthClass=compact" constant="29"/>
                             </constraint>
-                            <constraint firstItem="SEX-C0-Hi1" firstAttribute="centerX" secondItem="vO0-sJ-74b" secondAttribute="centerX" id="N9c-7G-H9f"/>
-                            <constraint firstItem="1lz-Xb-byT" firstAttribute="leading" secondItem="vO0-sJ-74b" secondAttribute="leadingMargin" constant="8" id="Pcq-Cc-QgO"/>
+                            <constraint firstItem="SEX-C0-Hi1" firstAttribute="centerX" secondItem="vO0-sJ-74b" secondAttribute="centerX" id="N9c-7G-H9f">
+                                <variation key="widthClass=compact" constant="4"/>
+                            </constraint>
+                            <constraint firstItem="1lz-Xb-byT" firstAttribute="leading" secondItem="vO0-sJ-74b" secondAttribute="leadingMargin" constant="8" id="Pcq-Cc-QgO">
+                                <variation key="widthClass=compact" constant="12"/>
+                            </constraint>
                             <constraint firstItem="87i-j7-O4d" firstAttribute="top" secondItem="Q0E-ag-p00" secondAttribute="bottom" constant="-3" id="S58-bg-hxc">
                                 <variation key="widthClass=compact" constant="18"/>
                             </constraint>
-                            <constraint firstAttribute="trailingMargin" secondItem="kBG-rm-zbP" secondAttribute="trailing" id="ZTk-RG-A7J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kBG-rm-zbP" secondAttribute="trailing" id="ZTk-RG-A7J">
+                                <variation key="widthClass=compact" constant="-4"/>
+                            </constraint>
                             <constraint firstItem="Q0E-ag-p00" firstAttribute="top" secondItem="1lz-Xb-byT" secondAttribute="bottom" constant="-4" id="ZZW-SV-tbY">
                                 <variation key="widthClass=compact" constant="8"/>
                             </constraint>
-                            <constraint firstItem="J2U-ag-x2B" firstAttribute="top" secondItem="O4g-ti-j7K" secondAttribute="bottom" id="ZeA-Bz-hoK"/>
+                            <constraint firstItem="J2U-ag-x2B" firstAttribute="top" secondItem="O4g-ti-j7K" secondAttribute="bottom" id="ZeA-Bz-hoK">
+                                <variation key="widthClass=compact" constant="32"/>
+                            </constraint>
                             <constraint firstItem="SEX-C0-Hi1" firstAttribute="top" secondItem="kBG-rm-zbP" secondAttribute="bottom" constant="41" id="chR-NL-KPt"/>
                             <constraint firstItem="GWP-cl-e1s" firstAttribute="top" secondItem="2nC-py-bOy" secondAttribute="bottom" constant="2" id="hnC-2u-gWe">
                                 <variation key="widthClass=compact" constant="19"/>
                             </constraint>
-                            <constraint firstAttribute="trailingMargin" secondItem="2nC-py-bOy" secondAttribute="trailing" id="jLB-A1-u7Z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Q0E-ag-p00" secondAttribute="trailing" id="rJe-05-q6r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2nC-py-bOy" secondAttribute="trailing" id="jLB-A1-u7Z">
+                                <variation key="widthClass=compact" constant="-4"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q0E-ag-p00" secondAttribute="trailing" id="rJe-05-q6r">
+                                <variation key="widthClass=compact" constant="-4"/>
+                            </constraint>
                             <constraint firstItem="kBG-rm-zbP" firstAttribute="leading" secondItem="vO0-sJ-74b" secondAttribute="leadingMargin" constant="8" id="ub9-g2-c3C">
-                                <variation key="widthClass=compact" constant="10"/>
+                                <variation key="widthClass=compact" constant="14"/>
                             </constraint>
                             <constraint firstItem="87i-j7-O4d" firstAttribute="leading" secondItem="vO0-sJ-74b" secondAttribute="leadingMargin" constant="8" id="vah-H5-obN">
-                                <variation key="widthClass=compact" constant="9"/>
+                                <variation key="widthClass=compact" constant="13"/>
                             </constraint>
-                            <constraint firstItem="J2U-ag-x2B" firstAttribute="leading" secondItem="vO0-sJ-74b" secondAttribute="leadingMargin" constant="-7" id="yc4-PD-rhd"/>
+                            <constraint firstItem="J2U-ag-x2B" firstAttribute="leading" secondItem="vO0-sJ-74b" secondAttribute="leadingMargin" constant="-7" id="yc4-PD-rhd">
+                                <variation key="widthClass=compact" constant="-3"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -637,7 +651,7 @@ Eg. Casas, Edificios, Calles, etc...</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4o-Uc-Qzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508.5" y="760"/>
+            <point key="canvasLocation" x="514.5" y="719"/>
         </scene>
         <!--Primeros Auxilios-->
         <scene sceneID="wg7-f3-ORb">
@@ -807,9 +821,13 @@ Eg. Casas, Edificios, Calles, etc...</string>
                             <constraint firstAttribute="trailingMargin" secondItem="cHl-sf-l7a" secondAttribute="trailing" constant="-20" id="A2d-nb-jPe"/>
                             <constraint firstItem="cHl-sf-l7a" firstAttribute="bottom" secondItem="Qgc-GY-Y1c" secondAttribute="bottomMargin" id="BGl-P2-tKT"/>
                             <constraint firstAttribute="leadingMargin" secondItem="0PA-T9-T8g" secondAttribute="leading" id="JV1-24-rPb"/>
-                            <constraint firstItem="cHl-sf-l7a" firstAttribute="top" secondItem="0PA-T9-T8g" secondAttribute="bottom" constant="24" id="m9f-9d-eOb"/>
+                            <constraint firstItem="cHl-sf-l7a" firstAttribute="top" secondItem="0PA-T9-T8g" secondAttribute="bottom" constant="24" id="m9f-9d-eOb">
+                                <variation key="widthClass=compact" constant="-7"/>
+                            </constraint>
                             <constraint firstItem="cHl-sf-l7a" firstAttribute="centerX" secondItem="Qgc-GY-Y1c" secondAttribute="centerX" id="t6h-gH-sf3"/>
-                            <constraint firstItem="0PA-T9-T8g" firstAttribute="top" secondItem="3Fg-2t-dz1" secondAttribute="bottom" id="vRO-AY-IvV"/>
+                            <constraint firstItem="0PA-T9-T8g" firstAttribute="top" secondItem="3Fg-2t-dz1" secondAttribute="bottom" id="vRO-AY-IvV">
+                                <variation key="widthClass=compact" constant="31"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -1075,7 +1093,7 @@ Eg. Casas, Edificios, Calles, etc...</string>
                                     </mask>
                                 </variation>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KHa-yb-dH9">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="KHa-yb-dH9">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
