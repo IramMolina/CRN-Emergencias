@@ -52,13 +52,13 @@ class InfoEmergencias: UIViewController, UITableViewDelegate, UITableViewDataSou
     //}
     
     private func checarNum(){
-        if emergencia == "Alergias/ Anafilaxia"{
+        if emergencia == "Alergias/Anafilaxia"{
             numEmergencia = 0}
         else if emergencia == "Ataque de ansiedad"{
             numEmergencia = 1}
         else if emergencia == "Atragantamiento/Asfixia"{
             numEmergencia = 2}
-        else if emergencia == "Convulsiones/ Epilepsia"{
+        else if emergencia == "Convulsiones/Epilepsia"{
             numEmergencia = 3}
         else if emergencia == "Crisis asmática"{
             numEmergencia = 4}
@@ -66,7 +66,7 @@ class InfoEmergencias: UIViewController, UITableViewDelegate, UITableViewDataSou
             numEmergencia = 5}
         else if emergencia == "Emergencias diabéticas"{
             numEmergencia = 6}
-        else if emergencia == "Envenenamiento/ sustancias peligrosas" {
+        else if emergencia == "Envenenamiento/sustancias peligrosas" {
             numEmergencia = 7}
         else if emergencia == "Estado de choque" {
             numEmergencia = 8}
